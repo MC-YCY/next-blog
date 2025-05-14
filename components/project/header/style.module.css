@@ -1,0 +1,42 @@
+.active {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 3px;
+        border-radius: 2px;
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        margin-left: -8px;
+        background-color: var(--color-chart-2);
+    }
+}
+
+.header-background {
+    background-image: radial-gradient(transparent 1px, var(--background) 1px);
+    background-color: transparent;
+    background-size: 4px 4px;
+    backdrop-filter: saturate(50%) blur(4px);
+    opacity: 0.06;
+}
+
+.navbar {
+    div {
+        text-shadow: 0 0 10px var(--background);
+        font-size: 16px;
+        position: relative;
+
+        /*&:after {*/
+        /*    content: "";*/
+        /*    position: absolute;*/
+        /*    inset: 0;*/
+        /*    background-color: var(--background);*/
+        /*    backdrop-filter: saturate(50%) blur(4px);*/
+        /*    opacity: .1;*/
+        /*    z-index: -1;*/
+        /*}*/
+    }
+}
