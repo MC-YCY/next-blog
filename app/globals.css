@@ -123,3 +123,15 @@ body,html{
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
+
+.home-dark-banner,
+.home-light-banner{
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.dark .home-dark-banner{
+  opacity: 1;
+}
+.light .home-light-banner{
+  opacity: 1;
+}
