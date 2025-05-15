@@ -6,7 +6,6 @@ export const MeAccountGitee = () => {
         <g fill="#5485ADFF" stroke="#5485ADFF">
             <path d="M 58.170 4.526 C 57.144 6.777 57.283 7.172 59.446 8.157 C 64.093 10.275 67.196 6.387 63.250 3.392 C 60.670 1.434 59.455 1.705 58.170 4.526 "/></g>
     </svg>
-
 }
 export const MeAccountGithub = () => {
     return <svg className={style.github} version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 242 104" preserveAspectRatio="xMidYMid meet">
@@ -15,7 +14,6 @@ export const MeAccountGithub = () => {
         <g fill="#5485ADFF" stroke="#5485ADFF">
             <path d="M 58.170 24.526 C 57.144 26.777 57.283 27.172 59.446 28.157 C 64.093 30.275 67.196 26.387 63.250 23.392 C 60.670 21.434 59.455 21.705 58.170 24.526 "/></g>
     </svg>
-
 }
 export const MeAccountIsqqw = () => {
     return <svg className={style.isqqw} version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 221 84"  preserveAspectRatio="xMidYMid meet">
