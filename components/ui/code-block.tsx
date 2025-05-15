@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { IconCheck, IconCopy } from "@tabler/icons-react";
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {atomDark} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {IconCheck, IconCopy} from "@tabler/icons-react";
+import {cn} from "@/lib/utils";
 
 type CodeBlockProps = {
     language: string;
     filename: string;
     highlightLines?: number[];
+    className?: string;
 } & (
     | {
     code: string;
@@ -30,6 +32,7 @@ export const CodeBlock = ({
                               code,
                               highlightLines = [],
                               tabs = [],
+                              className
                           }: CodeBlockProps) => {
     const [copied, setCopied] = React.useState(false);
     const [activeTab, setActiveTab] = React.useState(0);
@@ -54,7 +57,7 @@ export const CodeBlock = ({
         : highlightLines;
 
     return (
-        <div className="relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm">
+        <div className={cn("relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm", className)}>
             <div className="flex flex-col gap-2">
                 {tabsExist && (
                     <div className="flex  overflow-x-auto">
@@ -80,7 +83,7 @@ export const CodeBlock = ({
                             onClick={copyToClipboard}
                             className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans"
                         >
-                            {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
+                            {copied ? <IconCheck size={14}/> : <IconCopy size={14}/>}
                         </button>
                     </div>
                 )}

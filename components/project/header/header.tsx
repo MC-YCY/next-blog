@@ -1,6 +1,6 @@
 'use client';
 
-import {Signature} from "@/components/project/signature/signature";
+import {SignatureGroup} from "@/components/project/signature/signature";
 import {ThemeSwitch} from "@/components/project/theme-switch/theme-switch";
 import {HeaderMobileMenu} from './header-mobile-menu';
 import {cn} from "@/lib/utils";
@@ -11,7 +11,7 @@ import {usePathname, useRouter} from "next/navigation";
 const HeaderLogo = () => {
     return <>
         <div className='w-[300px]'>
-            <Signature></Signature>
+            <SignatureGroup></SignatureGroup>
         </div>
     </>
 }

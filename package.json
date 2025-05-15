@@ -13,6 +13,7 @@
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/cli": "^4.1.6",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "jss": "^10.10.0",
@@ -35,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4.1.6",
     "tw-animate-css": "^1.2.9",
     "typescript": "^5"
