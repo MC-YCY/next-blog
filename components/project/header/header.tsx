@@ -11,7 +11,9 @@ import {usePathname, useRouter} from "next/navigation";
 const HeaderLogo = () => {
     return <>
         <div className='w-[300px]'>
-            <SignatureGroup></SignatureGroup>
+            <div className='w-[150px]'>
+                <SignatureGroup></SignatureGroup>
+            </div>
         </div>
     </>
 }
