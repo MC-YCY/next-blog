@@ -1,28 +1,46 @@
 .gitee,
 .gitee g,
-.gitee path{
+.gitee path {
     fill: #fff;
-    stroke:#fff;
+    stroke: #fff;
     stroke-width: 2px;
 }
+
 .github,
 .github g,
-.github path{
+.github path {
     fill: #fff;
-    stroke:#fff;
+    stroke: #fff;
     stroke-width: 2px;
 }
+
 .isqqw,
 .isqqw g,
-.isqqw path{
+.isqqw path {
     fill: #fff;
-    stroke:#fff;
+    stroke: #fff;
     stroke-width: 2px;
 }
+
 .blog,
 .blog g,
-.blog path{
+.blog path {
     fill: #fff;
-    stroke:#fff;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.HomeTextSvgIcon g,
+.HomeTextSvgIcon path,
+.ArticleTextSvgIcon g,
+.ArticleTextSvgIcon path,
+.DiaryTextSvgIcon g,
+.DiaryTextSvgIcon path,
+.PictureTextSvgIcon g,
+.PictureTextSvgIcon path,
+.AboutTextSvgIcon g,
+.AboutTextSvgIcon path {
+    fill: var(--foreground);
+    stroke: var(--foreground);
     stroke-width: 2px;
 }

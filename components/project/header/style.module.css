@@ -1,18 +1,10 @@
 .active {
     position: relative;
-
-    &:before {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 3px;
-        border-radius: 2px;
-        position: absolute;
-        bottom: -4px;
-        left: 50%;
-        margin-left: -8px;
-        background-color: var(--color-chart-2);
-    }
+}
+.active g,
+.active path{
+    stroke: url(#cyberGradient);
+    fill: url(#cyberGradient);
 }
 .header{
     transition: all .15s ease-in-out;

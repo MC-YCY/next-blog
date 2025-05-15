@@ -9,6 +9,7 @@ import {blogConfig} from '@/blog.config'
 import {usePathname, useRouter} from "next/navigation";
 import {useEffect, useRef, useState} from "react";
 import {throttle} from 'lodash-es';
+import {motion, useScroll} from "framer-motion";
 
 const HeaderLogo = () => {
     return <>
@@ -34,7 +35,9 @@ const HeaderNavigate = () => {
                     if (route.path === pathname) {
                         className = cn('font-bold', style.active);
                     }
-                    return <div key={route.path} className={className} onClick={() => goRoute(route)}>{route.name}</div>
+                    return <div key={route.path} className={cn(className, 'w-[34px]')} onClick={() => goRoute(route)}>
+                        <route.icon className={className}></route.icon>
+                    </div>
                 })
             }
         </div>
@@ -82,7 +85,15 @@ export const Header = () => {
             handleScroll.cancel(); // 重要！取消 lodash 的 throttle
         };
     }, []);
+    const {scrollYProgress} = useScroll();
+
     return <>
+        <motion.div
+            className="fixed inset-x-0 top-0 z-50 h-[1px] origin-left bg-[#c800de]"
+            style={{
+                scaleX: scrollYProgress,
+            }}
+        />
         <div
             className={cn('w-full h-[64px] flex justify-center items-center fixed z-[30] pl-[32px] pr-[32px] box-border', translateYClassName, style['header'])}>
             <HeaderLogo></HeaderLogo>
