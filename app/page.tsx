@@ -115,5 +115,7 @@ export default function Home() {
                 className='absolute w-[11vw] h-[11vw] bg-[#daaf9d] dark:bg-[#566fa8] left-[40.33vw] bottom-[20vh] rounded-[50%] opacity-20'></div>
         </div>
         <div className='w-full h-screen'></div>
+        <div className='w-full h-screen'></div>
+        <div className='w-full h-screen'></div>
     </div>
 }

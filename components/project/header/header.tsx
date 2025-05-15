@@ -7,7 +7,7 @@ import {cn} from "@/lib/utils";
 import style from './style.module.css';
 import {blogConfig} from '@/blog.config'
 import {usePathname, useRouter} from "next/navigation";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {throttle} from 'lodash-es';
 
 const HeaderLogo = () => {
@@ -49,9 +49,28 @@ const HeaderScreen = () => {
 }
 export const Header = () => {
     const [opacityClassName, setOpacityClassName] = useState('opacity-6')
+    const [translateYClassName, setTranslateYClassName] = useState('translate-y-[0%]');
+    const lastScrollY = useRef(0);  // 新增 ref 存储上次滚动位置
+
     useEffect(() => {
         const handleScroll = throttle(() => {
-            const shouldOpaque = document.documentElement.scrollTop > 100;
+            const currentScrollY = document.documentElement.scrollTop;
+
+            // 判断滚动方向
+            const isScrollingDown = currentScrollY > lastScrollY.current;
+            lastScrollY.current = currentScrollY;
+            console.log(isScrollingDown)
+            // 组合判断条件：滚动超过100px 且 向下滚动
+            const shouldOpaque = currentScrollY > 100;
+            if (shouldOpaque && currentScrollY > window.innerHeight) {
+                if (isScrollingDown) {
+                    setTranslateYClassName('translate-y-[-100%]');
+                } else {
+                    setTranslateYClassName('translate-y-[0%]');
+                }
+            } else {
+                setTranslateYClassName('translate-y-[0%]');
+            }
             setOpacityClassName(shouldOpaque ? 'opacity-86' : 'opacity-6');
         }, 100); // 100ms 节流间隔
 
@@ -64,13 +83,14 @@ export const Header = () => {
         };
     }, []);
     return <>
-        <div className='w-full h-[64px] flex justify-center items-center fixed z-[30] pl-[32px] pr-[32px] box-border'>
+        <div
+            className={cn('w-full h-[64px] flex justify-center items-center fixed z-[30] pl-[32px] pr-[32px] box-border', translateYClassName, style['header'])}>
             <HeaderLogo></HeaderLogo>
             <HeaderNavigate></HeaderNavigate>
             <HeaderScreen></HeaderScreen>
             <HeaderMobileMenu></HeaderMobileMenu>
         </div>
         <div
-            className={cn('w-full h-[64] fixed z-[20] pointer-events-none', opacityClassName, style['header-background'])}></div>
+            className={cn('w-full h-[64] fixed z-[20] pointer-events-none', opacityClassName, translateYClassName, style['header-background'])}></div>
     </>
 }
