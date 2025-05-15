@@ -4,11 +4,10 @@ import Image from 'next/image'
 import {CodeBlock} from "@/components/ui/code-block";
 import {SignatureGroup} from "@/components/project/signature/signature";
 import {
-    MeAccountBlog,
-    MeAccountGitee,
-    MeAccountGithub,
-    MeAccountIsqqw
-} from "@/components/project/me-account/me-account";
+    BlogSvgIcon,
+    GiteeSvgIcon,
+    GithubSvgIcon, IsqqwSvgIcon
+} from "@/components/project/svg-icons/website";
 import {Diary} from "@/components/project/diary/diary";
 import {IconSunFilled} from "@tabler/icons-react";
 
@@ -50,19 +49,19 @@ const HomeHero = () => {
                             </>}></Diary>
                         <div className='mt-[16px] flex'>
                             <a className={'w-[50px] cursor-pointer'} href='https://github.com/MC-YCY' target='_blank'>
-                                <MeAccountGithub></MeAccountGithub>
+                                <GithubSvgIcon></GithubSvgIcon>
                             </a>
                             <a className={'w-[50px] ml-5 cursor-pointer'} href='https://gitee.com/yin-chunyang'
                                target='_blank'>
-                                <MeAccountGitee></MeAccountGitee>
+                                <GiteeSvgIcon></GiteeSvgIcon>
                             </a>
                             <a className={'w-[50px] ml-5 cursor-pointer'}
                                href='https://www.isqqw.com/pcenter?userid=1790&md=tb' target='_blank'>
-                                <MeAccountIsqqw></MeAccountIsqqw>
+                                <IsqqwSvgIcon></IsqqwSvgIcon>
                             </a>
                             <a className={'w-[50px] ml-5 cursor-pointer'} href='http://47.93.248.11/home'
                                target='_blank'>
-                                <MeAccountBlog></MeAccountBlog>
+                                <BlogSvgIcon></BlogSvgIcon>
                             </a>
                         </div>
                     </div>
