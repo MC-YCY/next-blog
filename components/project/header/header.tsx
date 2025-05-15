@@ -7,6 +7,8 @@ import {cn} from "@/lib/utils";
 import style from './style.module.css';
 import {blogConfig} from '@/blog.config'
 import {usePathname, useRouter} from "next/navigation";
+import {useEffect, useState} from "react";
+import {throttle} from 'lodash-es';
 
 const HeaderLogo = () => {
     return <>
@@ -46,13 +48,29 @@ const HeaderScreen = () => {
     </>
 }
 export const Header = () => {
+    const [opacityClassName, setOpacityClassName] = useState('opacity-6')
+    useEffect(() => {
+        const handleScroll = throttle(() => {
+            const shouldOpaque = document.documentElement.scrollTop > 100;
+            setOpacityClassName(shouldOpaque ? 'opacity-86' : 'opacity-6');
+        }, 100); // 100ms 节流间隔
+
+        window.addEventListener('scroll', handleScroll);
+
+        // 清理函数
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            handleScroll.cancel(); // 重要！取消 lodash 的 throttle
+        };
+    }, []);
     return <>
-        <div className='w-full h-[64px] flex justify-center items-center fixed z-[10] pl-[32px] pr-[32px] box-border'>
+        <div className='w-full h-[64px] flex justify-center items-center fixed z-[30] pl-[32px] pr-[32px] box-border'>
             <HeaderLogo></HeaderLogo>
             <HeaderNavigate></HeaderNavigate>
             <HeaderScreen></HeaderScreen>
             <HeaderMobileMenu></HeaderMobileMenu>
         </div>
-        <div className={cn('w-full h-[64] fixed z-[9] pointer-events-none', style['header-background'])}></div>
+        <div
+            className={cn('w-full h-[64] fixed z-[20] pointer-events-none', opacityClassName, style['header-background'])}></div>
     </>
 }

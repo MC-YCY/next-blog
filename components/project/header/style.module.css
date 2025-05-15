@@ -16,11 +16,10 @@
 }
 
 .header-background {
-    background-image: radial-gradient(transparent 1px, var(--background) 1px);
-    background-color: transparent;
+    background-color: var(--background);
     background-size: 4px 4px;
-    backdrop-filter: saturate(50%) blur(4px);
-    opacity: 0.06;
+    backdrop-filter: blur(24px);
+    transition: all .15s ease-in-out;
 }
 
 .navbar {
