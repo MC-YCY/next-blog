@@ -112,7 +112,7 @@ export default function Home() {
             <div
                 className='absolute w-[27vw] h-[27vw] bg-[#c29f92] dark:bg-[#293558] left-[5.46vw] bottom-[10vh] rounded-[50%] opacity-30'></div>
             <div
-                className='absolute w-[11vw] h-[11vw] bg-[#daaf9d] dark:bg-[#566fa8] left-[40.33vw] bottom-[40vh] rounded-[50%] opacity-20'></div>
+                className='absolute w-[11vw] h-[11vw] bg-[#daaf9d] dark:bg-[#566fa8] left-[40.33vw] bottom-[20vh] rounded-[50%] opacity-20'></div>
         </div>
         <div className='w-full h-screen'></div>
     </div>
