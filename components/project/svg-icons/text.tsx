@@ -1,3 +1,5 @@
+'use client';
+
 import style from './style.module.css';
 import React from "react";
 import {cn} from "@/lib/utils";
@@ -5,8 +7,7 @@ import {cn} from "@/lib/utils";
 export const HomeTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>) => {
     return <svg  {...props} className={cn(style.HomeTextSvgIcon, props?.className)} version="1.0"
                  xmlns="http://www.w3.org/2000/svg"
-                 width="100%%"
-                 height="100%" viewBox="0 0 146 53" preserveAspectRatio="xMidYMid meet">
+                 viewBox="0 0 146 53" preserveAspectRatio="xMidYMid meet">
         <defs>
             {/* 炫光渐变 */}
             <linearGradient
@@ -41,8 +42,7 @@ export const HomeTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>
 export const ArticleTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>) => {
     return <svg  {...props} className={cn(style.ArticleTextSvgIcon, props?.className)} version="1.0"
                  xmlns="http://www.w3.org/2000/svg"
-                 width="100%"
-                 height="100%" viewBox="0 0 161 54" preserveAspectRatio="xMidYMid meet">
+                 viewBox="0 0 161 54" preserveAspectRatio="xMidYMid meet">
         <defs>
             {/* 炫光渐变 */}
             <linearGradient
@@ -80,8 +80,7 @@ export const ArticleTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGEleme
 
 export const DiaryTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>) => {
     return <svg  {...props} className={cn(style.DiaryTextSvgIcon, props?.className)} version="1.0"
-                 xmlns="http://www.w3.org/2000/svg" width="100%"
-                 height="100%" viewBox="0 0 160 77" preserveAspectRatio="xMidYMid meet">
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 77" preserveAspectRatio="xMidYMid meet">
         <defs>
             {/* 炫光渐变 */}
             <linearGradient
@@ -124,8 +123,7 @@ export const DiaryTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement
 export const PictureTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>) => {
     return <svg  {...props} className={cn(style.PictureTextSvgIcon, props?.className)} version="1.0"
                  xmlns="http://www.w3.org/2000/svg"
-                 width="100%"
-                 height="100%" viewBox="0 0 167 53" preserveAspectRatio="xMidYMid meet">
+                 viewBox="0 0 167 53" preserveAspectRatio="xMidYMid meet">
         <defs>
             {/* 炫光渐变 */}
             <linearGradient
@@ -172,8 +170,7 @@ export const PictureTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGEleme
 export const AboutTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>) => {
     return <svg  {...props} className={cn(style.AboutTextSvgIcon, props?.className)} version="1.0"
                  xmlns="http://www.w3.org/2000/svg"
-                 width="100%"
-                 height="100%" viewBox="0 0 150 54" preserveAspectRatio="xMidYMid meet">
+                 viewBox="0 0 150 54" preserveAspectRatio="xMidYMid meet">
         <defs>
             {/* 炫光渐变 */}
             <linearGradient
