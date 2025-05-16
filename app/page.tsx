@@ -14,7 +14,6 @@ import {cn} from "@/lib/utils";
 import {PartTitle, PartTitleAction} from "@/components/project/part-title/part-title";
 import VerticalToHorizontalScroll
     from "@/components/project/vertical-to-horizontal-scroll/vertical-to-horizontal-scroll";
-import {IconCode} from '@tabler/icons-react'
 import {ProjectCard} from "@/components/project/project-card";
 
 const HomeHero = () => {
@@ -102,32 +101,17 @@ const me = new Developer();`}
 }
 
 const HomeData = () => {
-    return <div className={cn(
-        'max-w-[100rem] mx-auto py-10 px-2 md:px-8',
-    )}>
-        <div className={cn(
-            'flex flex-col justify-between',
-            'md:flex-row md:justify-between',
-            'h-auto md:h-[400px]'
-        )}>
-            <div className={cn(
-                'flex flex-col justify-between',
-                'w-full md:w-[316px]'
-            )}>
-                <div className="w-full h-[188px] bg-red-500"></div>
-                <div className={'h-[20px]'}></div>
-                <div className="w-full h-[188px] bg-sky-400"></div>
+    return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8')}>
+        <div className={'xl:flex md:flex block flex-wrap'}>
+            <div className={'xl:min-w-[320px] md:min-w-[320px]'}>
+                <div className={'w-full h-[190px] bg-foreground'}>
+
+                </div>
+                <div className={'w-full h-[190px] mt-[20px] bg-fuchsia-50'}>
+
+                </div>
             </div>
-
-            <div className="hidden md:block w-[40px]"></div>
-
-            <div className={cn(
-                'w-full',
-                'hidden',
-                'md:flex-1',
-                'md:block',
-                'bg-gray-300'
-            )}>
+            <div className={'flex-1 xl:ml-[20px] md:ml-[20px] xl:mt-0 md:mt-0 md:w-[100%] mt-[20px] min-h-[400px] bg-amber-100'}>
 
             </div>
         </div>
