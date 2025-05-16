@@ -95,11 +95,13 @@ export const Header = () => {
             }}
         />
         <div
-            className={cn('w-full h-[64px] flex justify-center items-center fixed z-[30] pl-[32px] pr-[32px] box-border', translateYClassName, style['header'])}>
-            <HeaderLogo></HeaderLogo>
-            <HeaderNavigate></HeaderNavigate>
-            <HeaderScreen></HeaderScreen>
-            <HeaderMobileMenu></HeaderMobileMenu>
+            className={cn('w-full fixed z-[30]', translateYClassName, style['header'])}>
+            <div className={'max-w-[100rem] mx-auto h-[64px] px-2 flex items-center justify-between'}>
+                <HeaderLogo></HeaderLogo>
+                <HeaderNavigate></HeaderNavigate>
+                <HeaderScreen></HeaderScreen>
+                <HeaderMobileMenu></HeaderMobileMenu>
+            </div>
         </div>
         <div
             className={cn('w-full h-[64] fixed z-[20] pointer-events-none', opacityClassName, translateYClassName, style['header-background'])}></div>
