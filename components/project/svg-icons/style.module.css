@@ -31,15 +31,10 @@
 }
 
 .HomeTextSvgIcon g,
-.HomeTextSvgIcon path,
 .ArticleTextSvgIcon g,
-.ArticleTextSvgIcon path,
 .DiaryTextSvgIcon g,
-.DiaryTextSvgIcon path,
 .PictureTextSvgIcon g,
-.PictureTextSvgIcon path,
-.AboutTextSvgIcon g,
-.AboutTextSvgIcon path {
+.AboutTextSvgIcon g {
     fill: var(--foreground);
     stroke: var(--foreground);
     stroke-width: 2px;
