@@ -10,6 +10,10 @@ import {
 } from "@/components/project/svg-icons/website";
 import {Diary} from "@/components/project/diary/diary";
 import {IconSunFilled} from "@tabler/icons-react";
+import {cn} from "@/lib/utils";
+import {PartTitle, PartTitleAction} from "@/components/project/part-title/part-title";
+import VerticalToHorizontalScroll
+    from "@/components/project/vertical-to-horizontal-scroll/vertical-to-horizontal-scroll";
 
 const HomeHero = () => {
     return <div className='absolute h-screen flex w-full left-0 z-[10] justify-center items-center pointer-events-none'>
@@ -95,6 +99,64 @@ const me = new Developer();`}
     </div>
 }
 
+const HomeData = () => {
+    return <div className={cn(
+        'max-w-[100rem] mx-auto py-10 px-2 md:px-8',
+    )}>
+        <div className={cn(
+            'flex flex-col justify-between',
+            'md:flex-row md:justify-between',
+            'h-auto md:h-[400px]'
+        )}>
+            <div className={cn(
+                'flex flex-col justify-between',
+                'w-full md:w-[316px]'
+            )}>
+                <div className="w-full h-[188px] bg-red-500"></div>
+                <div className={'h-[20px]'}></div>
+                <div className="w-full h-[188px] bg-sky-400"></div>
+            </div>
+
+            <div className="hidden md:block w-[40px]"></div>
+
+            <div className={cn(
+                'w-full',
+                'hidden',
+                'md:flex-1',
+                'md:block',
+                'bg-gray-300'
+            )}>
+
+            </div>
+        </div>
+    </div>
+}
+
+const HomeCode = () => {
+    const tabs = [
+        {label: '全部', value: 'all'},
+        {label: 'Vue', value: 'vue'},
+        {label: 'React', value: 'react'},
+        {label: 'Echarts', value: 'echarts'},
+        {label: 'JavaScript', value: 'js'},
+    ]
+    return <div className={'max-w-[100rem] mx-auto py-10 px-2 md:px-8'}>
+        <PartTitle title={'一些"小挂件"'} description={'重复造的轮子罢了，知其然不知其所以然...'} action={
+            <div className={'max-w-[100%] lg:max-w-[332px] overflow-x-hidden'}>
+                <VerticalToHorizontalScroll>
+                    <PartTitleAction tabs={tabs}></PartTitleAction>
+                </VerticalToHorizontalScroll>
+            </div>
+        }></PartTitle>
+    </div>
+}
+
+const HomeDiary = () => {
+    return <div className={'max-w-[100rem] mx-auto py-10 px-2 md:px-8'}>
+
+    </div>
+}
+
 export default function Home() {
     return <div>
         <div className='w-full h-screen relative overflow-hidden'>
@@ -114,8 +176,8 @@ export default function Home() {
             <div
                 className='absolute w-[11vw] h-[11vw] bg-[#daaf9d] dark:bg-[#566fa8] left-[40.33vw] bottom-[20vh] rounded-[50%] opacity-20'></div>
         </div>
-        <div className='w-full h-screen'></div>
-        <div className='w-full h-screen'></div>
-        <div className='w-full h-screen'></div>
+        <HomeData></HomeData>
+        <HomeCode></HomeCode>
+        <HomeDiary></HomeDiary>
     </div>
 }
