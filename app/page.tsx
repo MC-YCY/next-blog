@@ -15,6 +15,8 @@ import {PartTitle, PartTitleAction} from "@/components/project/part-title/part-t
 import VerticalToHorizontalScroll
     from "@/components/project/vertical-to-horizontal-scroll/vertical-to-horizontal-scroll";
 import {ProjectCard} from "@/components/project/project-card";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Scrollbar} from 'swiper/modules';
 
 const HomeHero = () => {
     return <div className='absolute h-screen flex w-full left-0 z-[10] justify-center items-center pointer-events-none'>
@@ -104,15 +106,67 @@ const HomeData = () => {
     return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8')}>
         <div className={'xl:flex md:flex block flex-wrap'}>
             <div className={'xl:min-w-[320px] md:min-w-[320px]'}>
-                <div className={'w-full h-[190px] bg-foreground'}>
-
+                <div
+                    className={'w-full flex flex-col justify-center h-[190px] bg-[linear-gradient(121deg,rgba(186,255,16,0.1)_0%,rgba(255,37,243,0.09)_100%)] rounded-[14px] py-[32px] px-[40px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+                    <div className={'text-[64px] h-[64px] flex items-center text-foreground'}>6864</div>
+                    <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>总访问量</div>
                 </div>
-                <div className={'w-full h-[190px] mt-[20px] bg-fuchsia-50'}>
-
+                <div
+                    className={'w-full flex flex-col justify-center h-[190px] mt-[20px] bg-[linear-gradient(121deg,rgba(255,57,244,0.1)_0%,rgba(45,86,255,0.1)_100%)] rounded-[14px] py-[32px] px-[40px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+                    <div className={'text-[64px] h-[64px] flex items-center text-foreground'}>679</div>
+                    <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>今日访问</div>
                 </div>
             </div>
-            <div className={'flex-1 xl:ml-[20px] md:ml-[20px] xl:mt-0 md:mt-0 md:w-[100%] mt-[20px] min-h-[400px] bg-amber-100'}>
-
+            <div
+                className={'flex-1 xl:ml-[20px] md:ml-[20px] xl:mt-0 md:mt-0 md:w-[100%] mt-[20px] h-[400px] rounded-[14px] overflow-hidden  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+                <Swiper
+                    className={'w-full h-full'}
+                    scrollbar={{
+                        hide: false,
+                        horizontalClass: 'custom-swiper-scrollbar',
+                    }}
+                    modules={[Scrollbar]}>
+                    <SwiperSlide>
+                        <div className={'w-full h-full relative'}>
+                            <div
+                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
+                                <div className={'w-[100%] flex flex-col p-[40px] xl:w-[470px]'}>
+                                    <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
+                                    <div
+                                        className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
+                                    </div>
+                                    <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
+                                        ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
+                                    </div>
+                                </div>
+                            </div>
+                            <Image
+                                fill={true}
+                                objectFit={'cover'}
+                                src='/images/yy01.jpg' alt=''></Image>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={'w-full h-full relative'}>
+                            <div
+                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
+                                <div className={'w-[100%] flex flex-col p-[40px] xl:w-[470px]'}>
+                                    <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
+                                    <div
+                                        className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
+                                    </div>
+                                    <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
+                                        ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
+                                    </div>
+                                </div>
+                            </div>
+                            <Image
+                                fill={true}
+                                objectFit={'cover'}
+                                src='/images/yy02.jpg' alt=''></Image>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </div>
     </div>

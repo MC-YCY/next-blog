@@ -4,22 +4,27 @@ import React, {JSX, useEffect, useState} from "react";
 import style from './style.module.css';
 import {cn} from '@/lib/utils'
 
-interface PartTitleProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
+interface PartTitleProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     description?: string;
     action?: JSX.Element;
 }
 
-export const PartTitle = (props: PartTitleProps) => {
-    return <div className={'w-full items-center block lg:flex'} {...props} title={''}>
-        <div className={'text-[32px] h-[32px] flex items-center text-nowrap'}>{props.title}</div>
-        <div
-            className={'text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2'}>{props?.description}</div>
-        <div className={'flex ml-auto'}>
-            {props?.action}
+export const PartTitle = ({ title, description, action, ...props }: PartTitleProps) => {
+    return (
+        <div className="w-full items-center block lg:flex" {...props} title="">
+            <div className="text-[32px] h-[32px] flex items-center text-nowrap">
+                {title}
+            </div>
+            {description && (
+                <div className="text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2">
+                    {description}
+                </div>
+            )}
+            {action && <div className="flex ml-auto">{action}</div>}
         </div>
-    </div>
-}
+    );
+};
 
 export const PartTitleAction = ({
                                     tabs,
