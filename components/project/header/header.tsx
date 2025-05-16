@@ -51,7 +51,7 @@ const HeaderScreen = () => {
     </>
 }
 export const Header = () => {
-    const [opacityClassName, setOpacityClassName] = useState('opacity-6')
+    const [opacityClassName, setOpacityClassName] = useState('opacity-10')
     const [translateYClassName, setTranslateYClassName] = useState('translate-y-[0%]');
     const lastScrollY = useRef(0);  // 新增 ref 存储上次滚动位置
 
@@ -74,7 +74,7 @@ export const Header = () => {
             } else {
                 setTranslateYClassName('translate-y-[0%]');
             }
-            setOpacityClassName(shouldOpaque ? 'opacity-86' : 'opacity-6');
+            setOpacityClassName(shouldOpaque ? 'opacity-86' : 'opacity-10');
         }, 100); // 100ms 节流间隔
 
         window.addEventListener('scroll', handleScroll);

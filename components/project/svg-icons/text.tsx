@@ -204,7 +204,3 @@ export const AboutTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement
         </g>
     </svg>
 }
-
-export const TextSvgIconGroup = () => {
-
-}

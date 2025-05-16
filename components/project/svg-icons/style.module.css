@@ -37,5 +37,6 @@
 .AboutTextSvgIcon g {
     fill: var(--foreground);
     stroke: var(--foreground);
-    stroke-width: 2px;
+    filter: drop-shadow(0 0 14px var(--background));
+    stroke-width: 4px;
 }
