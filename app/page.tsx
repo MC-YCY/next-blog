@@ -16,7 +16,7 @@ import VerticalToHorizontalScroll
     from "@/components/project/vertical-to-horizontal-scroll/vertical-to-horizontal-scroll";
 import {ProjectCard} from "@/components/project/project-card";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Scrollbar} from 'swiper/modules';
+import {Autoplay, Scrollbar} from 'swiper/modules';
 
 const HomeHero = () => {
     return <div className='absolute h-screen flex w-full left-0 z-[10] justify-center items-center pointer-events-none'>
@@ -125,7 +125,10 @@ const HomeData = () => {
                         hide: false,
                         horizontalClass: 'custom-swiper-scrollbar',
                     }}
-                    modules={[Scrollbar]}>
+                    autoplay={{
+                        delay: 6000,
+                    }}
+                    modules={[Scrollbar, Autoplay]}>
                     <SwiperSlide>
                         <div className={'w-full h-full relative'}>
                             <div
