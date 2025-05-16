@@ -104,7 +104,7 @@ const me = new Developer();`}
 
 const HomeData = () => {
     return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8 mt-4')}>
-        <PartTitle title={'一些"小破站"'} description={'想捞一波又心太善不了了之'}></PartTitle>
+        <PartTitle title={'一些"小破站"'} description={'想捞一波,因站长心太善没了下文'}></PartTitle>
         <div className={'xl:flex md:flex block flex-wrap mt-6'}>
             <div className={'xl:min-w-[320px] md:min-w-[320px]'}>
                 <div
