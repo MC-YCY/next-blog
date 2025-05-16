@@ -11,9 +11,10 @@ interface PartTitleProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
 }
 
 export const PartTitle = (props: PartTitleProps) => {
-    return <div className={'w-full items-center block lg:flex'} {...props}>
+    return <div className={'w-full items-center block lg:flex'} {...props} title={''}>
         <div className={'text-[32px] h-[32px] flex items-center text-nowrap'}>{props.title}</div>
-        <div className={'text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2'}>{props?.description}</div>
+        <div
+            className={'text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2'}>{props?.description}</div>
         <div className={'flex ml-auto'}>
             {props?.action}
         </div>
