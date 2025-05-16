@@ -103,8 +103,9 @@ const me = new Developer();`}
 }
 
 const HomeData = () => {
-    return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8')}>
-        <div className={'xl:flex md:flex block flex-wrap'}>
+    return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8 mt-4')}>
+        <PartTitle title={'一些"小破站"'} description={'想捞一波又心太善不了了之'}></PartTitle>
+        <div className={'xl:flex md:flex block flex-wrap mt-6'}>
             <div className={'xl:min-w-[320px] md:min-w-[320px]'}>
                 <div
                     className={'w-full flex flex-col justify-center h-[190px] bg-[linear-gradient(121deg,rgba(186,255,16,0.1)_0%,rgba(255,37,243,0.09)_100%)] rounded-[14px] py-[32px] px-[40px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
@@ -133,7 +134,7 @@ const HomeData = () => {
                         <div className={'w-full h-full relative'}>
                             <div
                                 className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
-                                <div className={'w-[100%] flex flex-col p-[40px] xl:w-[470px]'}>
+                                <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
                                     <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
                                     <div
                                         className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
@@ -141,6 +142,7 @@ const HomeData = () => {
                                     <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
                                         ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
                                     </div>
+                                    <a target={'_blank'} href={'https://www.isqqw.com/'} className={'mt-auto w-[122px] h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>官方网址</a>
                                 </div>
                             </div>
                             <Image
@@ -153,7 +155,7 @@ const HomeData = () => {
                         <div className={'w-full h-full relative'}>
                             <div
                                 className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
-                                <div className={'w-[100%] flex flex-col p-[40px] xl:w-[470px]'}>
+                                <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
                                     <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
                                     <div
                                         className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
@@ -161,6 +163,7 @@ const HomeData = () => {
                                     <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
                                         ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
                                     </div>
+                                    <a target={'_blank'} href={'https://www.isqqw.com/'} className={'mt-auto w-[122px] h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>官方网址</a>
                                 </div>
                             </div>
                             <Image
