@@ -133,7 +133,7 @@ const HomeData = () => {
                     <SwiperSlide>
                         <div className={'w-full h-full relative'}>
                             <div
-                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
+                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,0))]'}>
                                 <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
                                     <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
                                     <div
@@ -154,7 +154,7 @@ const HomeData = () => {
                     <SwiperSlide>
                         <div className={'w-full h-full relative'}>
                             <div
-                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,.1))]'}>
+                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,0))]'}>
                                 <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
                                     <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
                                     <div
