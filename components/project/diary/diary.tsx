@@ -9,6 +9,7 @@ interface Props {
     content: JSX.Element;
     className1?: string;
     className2?: string;
+    className3?: string;
 }
 
 export const Diary = ({
@@ -17,7 +18,8 @@ export const Diary = ({
                           weather,
                           content,
                           className1,
-                          className2
+                          className2,
+                          className3
                       }: Props) => {
     return <div className={cn('w-full bg-background min-h-[100px] relative', style.diary, className1)}>
         <div
@@ -32,7 +34,7 @@ export const Diary = ({
                 {weather}
             </div>
         </div>
-        <div className={style.content}>
+        <div className={cn(style.content,className3)}>
             {content}
         </div>
     </div>

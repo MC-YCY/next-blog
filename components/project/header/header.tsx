@@ -62,7 +62,6 @@ export const Header = () => {
             // 判断滚动方向
             const isScrollingDown = currentScrollY > lastScrollY.current;
             lastScrollY.current = currentScrollY;
-            console.log(isScrollingDown)
             // 组合判断条件：滚动超过100px 且 向下滚动
             const shouldOpaque = currentScrollY > 100;
             if (shouldOpaque && currentScrollY > window.innerHeight) {
