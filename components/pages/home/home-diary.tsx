@@ -10,8 +10,6 @@ import {
     IconSunFilled
 } from '@tabler/icons-react'
 import {Diary} from "@/components/project/diary/diary";
-import {TooltipProvider} from '@radix-ui/react-tooltip';
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 
 export const HomeDiary = () => {
     const [open, setOpen] = useState(true);
