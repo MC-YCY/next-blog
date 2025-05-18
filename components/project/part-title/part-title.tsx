@@ -1,23 +1,23 @@
 'use client';
 
-import React, {JSX, useEffect, useState} from "react";
+import React, {JSX, ReactNode, useEffect, useState} from "react";
 import {cn} from '@/lib/utils'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 interface PartTitleProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
-    description?: string;
+    description?: ReactNode;
     action?: JSX.Element;
 }
 
 export const PartTitle = ({ title, description, action, ...props }: PartTitleProps) => {
     return (
         <div className="w-full items-center block lg:flex" {...props} title="">
-            <div className="text-[32px] h-[32px] flex items-center text-nowrap">
+            <div className="text-[32px] h-[32px] flex items-center text-nowrap cursor-default">
                 {title}
             </div>
             {description && (
-                <div className="text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2">
+                <div className="text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2 cursor-default">
                     {description}
                 </div>
             )}

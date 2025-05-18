@@ -14,7 +14,7 @@ export const HomeCode = () => {
         {label: 'JavaScript', value: 'js'},
     ]
     return <Container>
-        <PartTitle title={'一些"小挂件"'} description={'重复造的轮子罢了，知其然不知其所以然...'} action={
+        <PartTitle data-tip={'tip:滑动选项、卡片查看更多'} title={'一些"小挂件"'} description={'重复造的轮子罢了，知其然不知其所以然...'} action={
             <div className={'max-w-[100%] lg:max-w-[340px] overflow-x-hidden'}>
                 <PartTitleAction tabs={tabs}></PartTitleAction>
             </div>

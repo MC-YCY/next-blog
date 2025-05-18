@@ -21,9 +21,52 @@
     background: var(--foreground);
     opacity: .06;
 }
-.custom-swiper-scrollbar .swiper-scrollbar-drag{
+
+.custom-swiper-scrollbar .swiper-scrollbar-drag {
     background: var(--primary);
     opacity: .5;
+}
+
+div[data-tip] {
+    position: relative;
+}
+
+div[data-tip]:hover:before{
+    opacity: 1;
+}
+
+div[data-tip]:before {
+    transition: all .15s linear;
+    content: attr(data-tip);
+    position: absolute;
+    font-size: 12px;
+    bottom: 100%;
+    left: 0;
+    height: 24px;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    opacity: 0;
+    animation: showTip 3s linear;
+    transform: translateY(-6px);
+}
+
+@keyframes showTip {
+    0% {
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @custom-variant dark (&:is(.dark *));

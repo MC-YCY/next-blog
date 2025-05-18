@@ -41,11 +41,11 @@ const HomeDataSwiper = () => {
                             <div
                                 className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
                             </div>
-                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
+                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3'}>
                                 ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
                             </div>
                             <a target={'_blank'} href={'https://www.isqqw.com/'}
-                               className={'mt-auto w-[122px] h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>官方网址</a>
+                               className={'mt-auto w-[122px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>官方网址</a>
                         </div>
                     </div>
                     <Image
@@ -63,19 +63,19 @@ const HomeDataSwiper = () => {
                             <div
                                 className={'text-[16px] line-[1.5] pt-[16px]'}>NestJs服务端博客网站
                             </div>
-                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60'}>
+                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3'}>
                                 用来尝试NestJs框架搭建的博客，前端用来尝试一种只提供逻辑的ui组件库，使用到了React、Tailwindcss、Radix
                                 UI、Aceternity UI、Vite、TypeScript、Socket.Io
                             </div>
                             <div className={'flex mt-auto'}>
                                 <a target={'_blank'} href={'http://47.93.248.11/home/'}
-                                   className={'w-[122px] h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>瞧一瞧</a>
+                                   className={'w-[122px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>瞧一瞧</a>
                                 <a target={'_blank'} href={'https://gitee.com/yin-chunyang/blog-ui'}
-                                   className={'w-[100px] opacity-60 mx-[10px] h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
+                                   className={'w-[100px] opacity-60 mx-[10px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
                                     前端
                                 </a>
                                 <a target={'_blank'} href={'https://gitee.com/yin-chunyang/blog-service'}
-                                   className={'w-[100px] opacity-60 h-[48px] rounded-[30px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
+                                   className={'w-[100px] opacity-60 h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
                                     后端
                                 </a>
                             </div>
