@@ -1,9 +1,9 @@
 'use client';
-import {cn} from "@/lib/utils";
 import {PartTitle} from "@/components/project/part-title/part-title";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Scrollbar} from "swiper/modules";
 import Image from "next/image";
+import {Container} from '@/components/project/container';
 
 const HomeDataCardCount = () => {
     return <div
@@ -92,9 +92,9 @@ const HomeDataSwiper = () => {
     </div>
 }
 export const HomeData = () => {
-    return <div className={cn('max-w-[100rem] mx-auto py-10 px-2 md:px-8 mt-4')}>
+    return <Container>
         <PartTitle title={'一些"小破站"'} description={'想捞一波,因站长心太善没了下文'}></PartTitle>
-        <div className={'w-full flex flex-col-reverse xl:flex-row mt-6'}>
+        <div className={'w-full flex flex-col-reverse xl:flex-row mt-3 xl:mt-6'}>
             <div className={'xl:min-w-[320px] flex justify-between xl:flex-col md:flex-row xl:w-[320px] w-full mt-[20px] xl:mt-0'}>
                 <div className={'w-full h-[100px] xl:h-[190px]'}>
                     <HomeDataCardCount></HomeDataCardCount>
@@ -107,5 +107,5 @@ export const HomeData = () => {
                 <HomeDataSwiper></HomeDataSwiper>
             </div>
         </div>
-    </div>
+    </Container>
 }

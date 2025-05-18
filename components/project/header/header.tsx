@@ -96,7 +96,7 @@ export const Header = () => {
         />
         <div
             className={cn('w-full fixed z-[30]', translateYClassName, style['header'])}>
-            <div className={'max-w-[100rem] mx-auto h-[64px] px-2 flex items-center justify-between'}>
+            <div className={'max-w-[100rem] mx-auto h-[64px] px-2 md:px-8 flex items-center justify-between'}>
                 <HeaderLogo></HeaderLogo>
                 <HeaderNavigate></HeaderNavigate>
                 <HeaderScreen></HeaderScreen>

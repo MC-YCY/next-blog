@@ -1,6 +1,8 @@
 'use client';
-export const HomeDiary = () => {
-    return <div className={'max-w-[100rem] mx-auto py-10 px-2 md:px-8'}>
+import {Container} from '@/components/project/container';
 
-    </div>
+export const HomeDiary = () => {
+    return <Container>
+        <div></div>
+    </Container>
 }
