@@ -57,7 +57,7 @@ export const HomeDiary = () => {
         <div className={'w-full mt-3 xl:mt-6 block xl:flex'}>
             <div className={'w-full xl:w-[450px]'}>
                 <div
-                    className={'pt-4 pb-2 px-2 shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px]'}>
+                    className={'pt-4 pb-2 px-4 shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px]'}>
                     <div className={'flex justify-between h-[30px] items-center pb-4 pt-2 box-border px-6'}>
                         <IconSquareRoundedChevronLeftFilled onClick={onPrevMonth} width={24} height={24}
                                                             className={'cursor-pointer'}></IconSquareRoundedChevronLeftFilled>
@@ -66,7 +66,8 @@ export const HomeDiary = () => {
                         <IconSquareRoundedChevronRightFilled onClick={onNextMonth} width={24} height={24}
                                                              className={'cursor-pointer'}></IconSquareRoundedChevronRightFilled>
                     </div>
-                    <Calendar open={open} date={date} firstDayOfWeek={1} onClick={clickCalendarItem}></Calendar>
+                    <Calendar cellHeight={58} open={open} date={date} firstDayOfWeek={1}
+                              onClick={clickCalendarItem}></Calendar>
                 </div>
                 <div className={'text-[14px] opacity-80 px-3 pt-4'}>
                     <a href="https://gitee.com/yin-chunyang/react-calendar" className={'underline'} target={'_blank'}>
@@ -83,24 +84,26 @@ export const HomeDiary = () => {
                     date={dayjs(date).format('YYYY年MM月DD日')}
                     weather={<IconSunFilled width={24} height={24} color={'#ecca2f'}/>}
                     content={<>
-                        <p>
-                            一名 <del className='text-[#f56c6c] font-bold'>吹牛</del> 开发工程师，什么都不会，这也不学那也不学。
+                        <p>React
+                            交互式日历组件解析：手势操作与高度可定制的日期选择器，这个React日历组件融合了传统日期选择与现代交互设计，主要提供以下功能：</p>
+                        <p className={'font-bold'}>动态日期渲染:</p>
+                        <p className={'ml-4'}>
+                            <li>鼠标拖拽展开/收起日历</li>
+                            <li>智能滑动阈值判定（5px容差值）</li>
+                            <li>平滑过渡动画效果</li>
                         </p>
-                        <p>时间轮回, 一年又一年,你还在想着新技术出来了,</p>
-                        <p>
-                            继续学习什么
-                            <a className='text-[#0070f3] font-bold cursor-pointer' target='_blank'
-                               href='https://nextjs.org/'>NextJs</a>
-                            , 什么
-                            <a className='text-[#00c16a] font-bold cursor-pointer' target='_blank'
-                               href='https://nuxt.com/'>NuxtJs</a>
-                            , 什么
-                            <a className='text-[#ea285a] font-bold cursor-pointer' target='_blank'
-                               href='https://nestjs.com/'>NestJs</a>
-                            ......
+                        <p className={'font-bold'}>多维度定制化:</p>
+                        <p className={'ml-4'}>
+                            <li>自定义周标题（customWeek）</li>
+                            <li>日期单元格渲染（customDay）</li>
+                            <li>动态高度配置（cellHeight）</li>
                         </p>
-                        <p>而你身边的人, 在考虑啥时候买第二套房子,什么时候生二胎,</p>
-                        <p>你还在捣鼓你的破代码.</p>
+                        <p className={'font-bold'}>事件反馈机制:</p>
+                        <p className={'ml-4'}>
+                            <li>日期选择回调（onClick）</li>
+                            <li>数据变化通知（onChange）</li>
+                            <li>展开状态切换（onToggle）</li>
+                        </p>
                     </>}></Diary>
             </div>
         </div>

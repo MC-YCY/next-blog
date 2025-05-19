@@ -68,7 +68,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         if (!('open' in props)) return;
         setIsDown(true);
         setMoveNum(0);
-        mouseEvent.startY = event.pageY;
+        mouseEvent.startY = event.clientY;
         mouseEvent.moveY = 0;
         setMouseEvent(deepClone(mouseEvent));
         setClearTransition(false);
@@ -111,8 +111,8 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
             if (!calendarTable.current) return;
             if (!calendarLayer.current) return;
 
-            let offsetY = event.pageY - mouseEvent.startY;
-            const dif = event.pageY - mouseEvent.startY;
+            let offsetY = event.clientY - mouseEvent.startY;
+            const dif = event.clientY - mouseEvent.startY;
 
             if (open) {
                 // 滑动中如果已经到最顶部就让toggle(visible)为true收起状态
