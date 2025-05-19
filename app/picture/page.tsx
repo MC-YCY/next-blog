@@ -1,6 +1,8 @@
 'use client';
-export default function (){
+
+const PicturePage = () => {
     return <>
         home
     </>
 }
+export default PicturePage

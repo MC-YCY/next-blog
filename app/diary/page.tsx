@@ -133,7 +133,7 @@ const DateList = ({date, onClick}: { date: Date, onClick: (arg0: DiaryType) => v
     </>
 }
 
-export default function () {
+const DiaryPage = () =>{
     const [open, setOpen] = useState(true);
     const [date, setDate] = useState(new Date());
     const onPrevMonth = () => {
@@ -236,3 +236,5 @@ export default function () {
         </Container>
     </div>
 }
+
+export default DiaryPage;

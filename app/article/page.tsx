@@ -6,7 +6,7 @@ import {Container} from "@/components/project/container";
 import {useState} from "react";
 import {ArticleType} from "@/type/article";
 
-export default function () {
+const ArticlePage = () =>{
     const [articleList, setArticleList] = useState<ArticleType[]>([
         {
             banner: '/images/34986_light.png',
@@ -88,3 +88,5 @@ export default function () {
         </Container>
     </div>
 }
+
+export default ArticlePage;

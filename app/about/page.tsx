@@ -1,6 +1,9 @@
 'use client';
-export default function (){
+
+const AboutPage = () =>{
     return <>
         home
     </>
 }
+
+export default AboutPage;
