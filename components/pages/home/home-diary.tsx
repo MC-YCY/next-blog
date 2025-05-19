@@ -87,23 +87,23 @@ export const HomeDiary = () => {
                         <p>React
                             交互式日历组件解析：手势操作与高度可定制的日期选择器，这个React日历组件融合了传统日期选择与现代交互设计，主要提供以下功能：</p>
                         <p className={'font-bold'}>动态日期渲染:</p>
-                        <p className={'ml-4'}>
+                        <div className={'ml-4'}>
                             <li>鼠标拖拽展开/收起日历</li>
                             <li>智能滑动阈值判定（5px容差值）</li>
                             <li>平滑过渡动画效果</li>
-                        </p>
+                        </div>
                         <p className={'font-bold'}>多维度定制化:</p>
-                        <p className={'ml-4'}>
+                        <div className={'ml-4'}>
                             <li>自定义周标题（customWeek）</li>
                             <li>日期单元格渲染（customDay）</li>
                             <li>动态高度配置（cellHeight）</li>
-                        </p>
+                        </div>
                         <p className={'font-bold'}>事件反馈机制:</p>
-                        <p className={'ml-4'}>
+                        <div className={'ml-4'}>
                             <li>日期选择回调（onClick）</li>
                             <li>数据变化通知（onChange）</li>
                             <li>展开状态切换（onToggle）</li>
-                        </p>
+                        </div>
                     </>}></Diary>
             </div>
         </div>
