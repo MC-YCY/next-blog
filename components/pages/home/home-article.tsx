@@ -3,6 +3,7 @@ import {Container} from "@/components/project/container";
 import {Article} from "@/components/project/article/article";
 import {useState} from "react";
 import {ArticleType} from "@/type/article";
+import {useRouter} from "next/navigation";
 
 export const HomeArticle = () => {
     const [articleList,setArticleList] = useState<ArticleType[]>([
@@ -49,6 +50,10 @@ export const HomeArticle = () => {
             tags: '项目/全栈博客'
         }
     ])
+    const router = useRouter();
+    const goArticle = () =>{
+        router.push('/article');
+    }
     return <Container>
         <PartTitle title={'一些"小作文"'}
                    description={'天天看各种框架比较，看的是瑟瑟发抖...'}></PartTitle>
@@ -62,6 +67,9 @@ export const HomeArticle = () => {
                     })
                 }
             </div>
+        </div>
+        <div className={'flex justify-center mt-[20px]'}>
+            <div onClick={goArticle} className={'cursor-pointer opacity-55 w-[120px] h-[36px] flex justify-center items-center text-foreground border-[1px] border-foreground rounded-[36px] text-[14px]'}>查看更多</div>
         </div>
     </Container>
 }

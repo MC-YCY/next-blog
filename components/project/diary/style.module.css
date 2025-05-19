@@ -1,20 +1,13 @@
 .diary {
-    box-shadow: 0 4px 24px #00000014;;
     padding: 20px 22px;
     box-sizing: border-box;
 }
 
 .background {
-    box-shadow: 0 4px 24px #00000014;
     opacity: 1;
 }
 
-html[class='dark'] .diary {
-    box-shadow: 0 4px 24px #ffffff14;
-}
-
 html[class='dark'] .background {
-    box-shadow: 0 4px 24px #ffffff14;
     opacity: 1;
 }
 
