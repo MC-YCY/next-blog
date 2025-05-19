@@ -21,8 +21,9 @@ import {
     DrawerTrigger
 } from "@/components/ui/drawer";
 import {cn} from '@/lib/utils'
+import {DiaryType} from "@/type/diary";
 
-const WriteButton = ({date}) => {
+const WriteButton = ({date}: { date: Date }) => {
     const [value, setValue] = useState("");
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -67,9 +68,9 @@ const WriteButton = ({date}) => {
         </DrawerContent>
     </Drawer>
 }
-const DateList = ({date, onClick}) => {
-    const [selected, setSelected] = useState();
-    const [list, setList] = useState([
+const DateList = ({date, onClick}: { date: Date, onClick: (arg0: DiaryType) => void }) => {
+    const [selected, setSelected] = useState<DiaryType['id']>();
+    const [list, setList] = useState<DiaryType[]>([
         {
             id: '1',
             title: '春秋半夏',
@@ -95,7 +96,7 @@ const DateList = ({date, onClick}) => {
     useEffect(() => {
         onItemClick(list[0])
     }, [date]);
-    const onItemClick = (item) => {
+    const onItemClick = (item: DiaryType) => {
         setSelected(item.id);
         onClick(item);
     }
@@ -117,7 +118,7 @@ const DateList = ({date, onClick}) => {
                         className2={cn('min-h-[40px]', selectedClassName)}
                         className3={'min-h-[40px]'}
                         title={item.title}
-                        date={item.date}
+                        date={dayjs(item.date).format('YYYY年MM月DD日')}
                         weather={item.weather}
                         content={item.content}></Diary>
                 </div>
@@ -173,7 +174,7 @@ export default function () {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    const clickListItem = (item) =>{
+    const clickListItem = (item:DiaryType) => {
         console.log(item)
     }
     return <div className={'pt-[64px]'}>
@@ -198,7 +199,7 @@ export default function () {
                     </div>
                 </div>
                 <div className={'flex-1 ml-0 xl:ml-[40px] pt-6 xl:pt-0 pl-[8px]'}>
-                    <DateList date={date} onClick={(item)=>clickListItem(item)}></DateList>
+                    <DateList date={date} onClick={(item) => clickListItem(item)}></DateList>
                 </div>
             </div>
             <div className={'pt-8 xl:pt-6 pl-[8px]'}>
