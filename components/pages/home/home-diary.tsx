@@ -10,6 +10,7 @@ import {
     IconSunFilled
 } from '@tabler/icons-react'
 import {Diary} from "@/components/project/diary/diary";
+import {useRouter} from "next/navigation";
 
 export const HomeDiary = () => {
     const [open, setOpen] = useState(true);
@@ -52,6 +53,10 @@ export const HomeDiary = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    const router = useRouter();
+    const goDiary = () =>{
+        router.push("/diary");
+    }
     return <Container>
         <PartTitle title={'灵光一现一些想法'} description={'落魄前端，加班前的幻想...'}></PartTitle>
         <div className={'w-full mt-3 xl:mt-6 block xl:flex'}>
@@ -66,7 +71,7 @@ export const HomeDiary = () => {
                         <IconSquareRoundedChevronRightFilled onClick={onNextMonth} width={24} height={24}
                                                              className={'cursor-pointer'}></IconSquareRoundedChevronRightFilled>
                     </div>
-                    <Calendar cellHeight={58} open={open} date={date} firstDayOfWeek={1}
+                    <Calendar openEvent={true} cellHeight={58} open={open} date={date} firstDayOfWeek={1}
                               onClick={clickCalendarItem}></Calendar>
                 </div>
                 <div className={'text-[14px] opacity-80 px-3 pt-4'}>
@@ -106,6 +111,9 @@ export const HomeDiary = () => {
                         </div>
                     </>}></Diary>
             </div>
+        </div>
+        <div className={'flex justify-center mt-[28px]'}>
+            <div onClick={goDiary} className={'cursor-pointer opacity-55 w-[120px] h-[36px] flex justify-center items-center text-foreground border-[1px] border-foreground rounded-[36px] text-[14px]'}>查看更多</div>
         </div>
     </Container>
 }

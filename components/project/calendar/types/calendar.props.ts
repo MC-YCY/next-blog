@@ -11,6 +11,7 @@ export interface renderCustom {
 export interface CalendarProps extends renderCustom {
     date: Date,
     firstDayOfWeek: number,
+    openEvent?:boolean,
     isFixedRows?: boolean,
     taskData?: Record<string, any>[],
     taskDataDateMap?: string,

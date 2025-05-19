@@ -65,6 +65,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
     const calendarTable = useRef<HTMLDivElement>(null);
     const calendarLayer = useRef<HTMLDivElement>(null);
     const mouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        if(!props.openEvent) return;
         if (!('open' in props)) return;
         setIsDown(true);
         setMoveNum(0);
@@ -74,6 +75,10 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         setClearTransition(false);
     }
     const mouseUp = (_: any, record: any) => {
+        if(!props.openEvent) {
+            props.onClick && props.onClick(record);
+            return;
+        }
         setIsDown(false);
         mouseEvent.endY = _.clientY;
         mouseEvent.moveY = 0;
@@ -103,6 +108,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         setClearTransition(false);
     }
     const mouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        if(!props.openEvent) return;
         if (!isDown) return;
         setMoveNum(moveNum + 1);
         if (moveNum > 5) {
