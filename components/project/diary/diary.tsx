@@ -22,9 +22,9 @@ export const Diary = ({
                           className3
                       }: Props) => {
     return <div
-        className={cn('w-full bg-background min-h-[100px] relative', 'shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]', style.diary, className1)}>
+        className={cn('w-full bg-[#f8f8fa] dark:bg-[#000] min-h-[100px] relative', 'shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]', style.diary, className1)}>
         <div
-            className={cn('absolute w-full h-full left-[-8px] top-[8px] bg-background z-[-1]', 'shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]', style.background, className2)}></div>
+            className={cn('absolute w-full h-full left-[-8px] top-[8px] bg-[#f8f8fa] dark:bg-[#000] z-[-1]', 'shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]', className2)}></div>
         <div className={cn('w-full flex justify-between items-center pb-[10px] relative px-[10px]')}>
             <div className='absolute w-full h-[3px] bg-[#0AA9DB] left-0 bottom-0'></div>
             <div className={cn('text-[18px] cursor-default')}>
@@ -35,7 +35,7 @@ export const Diary = ({
                 {weather}
             </div>
         </div>
-        <div className={cn(style.content, className3,'cursor-default')}>
+        <div className={cn(style.content, className3,'cursor-default dark:opacity-80')}>
             {content}
         </div>
     </div>
