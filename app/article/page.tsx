@@ -8,7 +8,7 @@ import {ArticleType} from "@/type/article";
 import {Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTitle} from "@/components/ui/drawer";
 import {SpanButton} from "@/components/ui/button";
 
-const ArticlePage = () =>{
+const ArticlePage = () => {
     const [articleList, setArticleList] = useState<ArticleType[]>([
         {
             banner: '/images/34986_light.png',
@@ -60,10 +60,10 @@ const ArticlePage = () =>{
         {label: 'Echarts', value: 'echarts'},
         {label: 'JavaScript', value: 'js'},
     ]
-    const onLoad = () =>{
+    const onLoad = () => {
         let n = [...articleList];
         n.length = 3;
-        setArticleList([...articleList,...n])
+        setArticleList([...articleList, ...n])
     }
     const [previewOpen, setPreviewOpen] = useState(false);
     const [current, setCurrent] = useState<ArticleType>({
@@ -77,7 +77,7 @@ const ArticlePage = () =>{
         setCurrent(state);
         setPreviewOpen(true);
     }
-    return <div className={'pt-[64px]'}>
+    return <div className={'pt-[64px] min-h-[calc(100vh-64px)]'}>
         <Container>
             <Drawer open={previewOpen} onClose={() => setPreviewOpen(false)}>
                 <DrawerContent>
@@ -110,7 +110,9 @@ const ArticlePage = () =>{
                 </div>
             </div>
             <div className={'flex justify-center mt-[20px]'}>
-                <div onClick={onLoad} className={'cursor-pointer opacity-55 w-[120px] h-[36px] flex justify-center items-center text-foreground border-[1px] border-foreground rounded-[36px] text-[14px]'}>加载更多</div>
+                <div onClick={onLoad}
+                     className={'cursor-pointer opacity-55 w-[120px] h-[36px] flex justify-center items-center text-foreground border-[1px] border-foreground rounded-[36px] text-[14px]'}>加载更多
+                </div>
             </div>
         </Container>
     </div>

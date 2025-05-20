@@ -20,7 +20,7 @@ const PicturePageItem = ({item, index}: { item: PictureType, index: number }) =>
         <PartTitle className={'pt-6 pb-3 px-2'} titleclassname={'text-[18px] opacity-80'} title={item.name}
                    action={<PicturePreview {...previewState}></PicturePreview>}></PartTitle>
         <div
-            className={'w-full h-[76vh] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
+            className={'w-full h-[76vh] max-h-[768px] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
             <PictureSwiperItemContent activeIndex={0} slideIndex={0}
                                       setStates={(state) => setStates(item, index, state)} {...item}></PictureSwiperItemContent>
         </div>
