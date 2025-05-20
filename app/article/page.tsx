@@ -5,6 +5,8 @@ import {Article} from "@/components/project/article/article";
 import {Container} from "@/components/project/container";
 import {useState} from "react";
 import {ArticleType} from "@/type/article";
+import {Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTitle} from "@/components/ui/drawer";
+import {SpanButton} from "@/components/ui/button";
 
 const ArticlePage = () =>{
     const [articleList, setArticleList] = useState<ArticleType[]>([
@@ -63,8 +65,33 @@ const ArticlePage = () =>{
         n.length = 3;
         setArticleList([...articleList,...n])
     }
+    const [previewOpen, setPreviewOpen] = useState(false);
+    const [current, setCurrent] = useState<ArticleType>({
+        banner: '',
+        title: '',
+        date: '',
+        describe: '',
+        tags: '',
+    });
+    const clickItem = (state: ArticleType) => {
+        setCurrent(state);
+        setPreviewOpen(true);
+    }
     return <div className={'pt-[64px]'}>
         <Container>
+            <Drawer open={previewOpen} onClose={() => setPreviewOpen(false)}>
+                <DrawerContent>
+                    <DrawerHeader>
+                        <DrawerTitle></DrawerTitle>
+                        <Article {...current}></Article>
+                    </DrawerHeader>
+                    <DrawerFooter>
+                        <DrawerClose>
+                            <SpanButton onClick={() => setPreviewOpen(false)}>关闭</SpanButton>
+                        </DrawerClose>
+                    </DrawerFooter>
+                </DrawerContent>
+            </Drawer>
             <PartTitle title={'一些"小作文"'}
                        description={'天天看各种框架比较，看的是瑟瑟发抖...'} action={
                 <div className={'max-w-[100%] lg:max-w-[340px] overflow-x-hidden'}>
@@ -76,7 +103,7 @@ const ArticlePage = () =>{
                     {
                         articleList.map((article, index) => {
                             return <div key={'home-article' + index}>
-                                <Article {...article}></Article>
+                                <Article {...article} onClick={(state) => clickItem(state)}></Article>
                             </div>
                         })
                     }
