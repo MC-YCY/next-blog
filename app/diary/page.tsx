@@ -74,23 +74,23 @@ const DateList = ({date, onClick}: { date: Date, onClick: (arg0: DiaryType) => v
         {
             id: '1',
             title: '春秋半夏',
-            date: dayjs(date).format('YYYY年MM月DD日'),
+            date: date,
             weather: <IconSunFilled width={24} height={24} color={'#ecca2f'}/>,
             content: '这天的风很平静...'
         },
         {
             id: '2',
-            title: '春秋半夏',
-            date: dayjs(date).format('YYYY年MM月DD日'),
+            title: '访客-浪迹天涯',
+            date: date,
             weather: <IconSunFilled width={24} height={24} color={'#ecca2f'}/>,
-            content: '这天的风很平静...'
+            content: '你也想飞起来吗...'
         },
         {
             id: '3',
-            title: '春秋半夏',
-            date: dayjs(date).format('YYYY年MM月DD日'),
+            title: '访客-18岁少女被38岁大汉强教react',
+            date: date,
             weather: <IconSunFilled width={24} height={24} color={'#ecca2f'}/>,
-            content: '这天的风很平静...'
+            content: '你也不想男朋友知道你学前端吧...'
         }
     ]);
     useEffect(() => {
@@ -133,7 +133,7 @@ const DateList = ({date, onClick}: { date: Date, onClick: (arg0: DiaryType) => v
     </>
 }
 
-const DiaryPage = () =>{
+const DiaryPage = () => {
     const [open, setOpen] = useState(true);
     const [date, setDate] = useState(new Date());
     const onPrevMonth = () => {
@@ -174,7 +174,7 @@ const DiaryPage = () =>{
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    const clickListItem = (item:DiaryType) => {
+    const clickListItem = (item: DiaryType) => {
         console.log(item)
     }
     return <div className={'pt-[64px]'}>
