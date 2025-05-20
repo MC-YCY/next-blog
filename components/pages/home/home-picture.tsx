@@ -278,7 +278,7 @@ export const HomePicture = () => {
         }></PartTitle>
         <div className={'w-full flex mt-3 xl:mt-6 select-none'}>
             <div
-                className={'w-full h-[768px] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
+                className={'w-full h-[76vh] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
                 <PictureSwiper setPreview={(state) => setPreviewState(state)}></PictureSwiper>
             </div>
         </div>
