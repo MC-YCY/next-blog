@@ -16,7 +16,7 @@ export const HomeHeroContent = () => {
                         <SignatureGroup s2Class={'delay-3000!'}></SignatureGroup>
                     </div>
 
-                    <div className='mt-[24px] cursor-default'>
+                    <div className='mt-[24px] cursor-default pl-[8px]'>
                         <Diary
                             className1={'bg-[rgba(255,255,255,.6)] dark:bg-[rgba(0,0,0,.3)]'}
                             className2={'bg-[rgba(255,255,255,.4)] dark:bg-[rgba(0,0,0,.3)]'}
@@ -73,7 +73,7 @@ export const HomeHeroContent = () => {
     skills: string[];
     age: number;
     constructor() {
-        this.name = 'chunQiuBanXia';
+        this.name = '春秋半夏';
         this.skills = [
             'Vue',
             'React'

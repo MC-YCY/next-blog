@@ -4,21 +4,69 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Scrollbar} from "swiper/modules";
 import Image from "next/image";
 import {Container} from '@/components/project/container';
+import {cn} from "@/lib/utils";
 
-const HomeDataCardCount = () => {
-    return <div
-        className={'h-full xl:py-[32px] xl:px-[40px] pl-4 pt-6 bg-[linear-gradient(121deg,rgba(186,255,16,0.1)_0%,rgba(255,37,243,0.09)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
-        <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>6864</div>
-        <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>总访问量</div>
-    </div>
-}
-const HomeDataCardDate = () => {
-    return <div
-        className={'h-full xl:py-[32px] xl:px-[40px] pl-4 pt-6 bg-[linear-gradient(121deg,rgba(255,57,244,0.1)_0%,rgba(45,86,255,0.1)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
-        <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>679</div>
-        <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>今日访问</div>
-    </div>
-}
+const list = [
+    {
+        title: 'ISQQW',
+        tip: 'Echarts示例最佳网站、这里有你想象不到的效果图',
+        describe: 'ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。',
+        banner: '/images/data-slide/isqqw-banner.png',
+        buttons: [
+            {
+                text: '官方网址',
+                href: 'https://www.isqqw.com/',
+                opacity: 'opacity-100'
+            }
+        ]
+    },
+    {
+        title: 'sa-blog',
+        tip: 'NestJs服务端博客网站',
+        describe: `用来尝试NestJs框架搭建的博客，前端用来尝试一种只提供逻辑的ui组件库，使用到了React、Tailwindcss、Radix UI、Aceternity UI、Vite、TypeScript、Socket.Io`,
+        banner: '/images/data-slide/sa-blog-banner.jpg',
+        buttons: [
+            {
+                text: '瞧一瞧',
+                href: 'http://47.93.248.11/home/',
+                opacity: 'opacity-100'
+            },
+            {
+                text: 'web-git',
+                href: 'https://gitee.com/yin-chunyang/blog-ui',
+                opacity: 'opacity-60'
+            },
+            {
+                text: 'service-git',
+                href: 'https://gitee.com/yin-chunyang/blog-service',
+                opacity: 'opacity-60'
+            }
+        ]
+    },
+    {
+        title: 'next-blog',
+        tip: 'Next.js尝试',
+        describe: `学习NextJs而创建,用到了Tailwindcss、Radix UI、Aceternity UI、TypeScript`,
+        banner: '/images/data-slide/next-blog-banner.jpg',
+        buttons: [
+            {
+                text: '需要点科学手段',
+                href: 'https://next-blog-xi-five-22.vercel.app/',
+                opacity: 'opacity-100'
+            },
+            {
+                text: 'Go',
+                href: 'http://47.93.248.11:3002/',
+                opacity: 'opacity-100'
+            },
+            {
+                text: 'Github',
+                href: 'https://github.com/MC-YCY/next-blog',
+                opacity: 'opacity-60'
+            }
+        ]
+    },
+]
 const HomeDataSwiper = () => {
     return <div
         className={'w-full h-full'}>
@@ -32,63 +80,54 @@ const HomeDataSwiper = () => {
                 delay: 6000,
             }}
             modules={[Scrollbar, Autoplay]}>
-            <SwiperSlide>
-                <div className={'w-full h-full relative'}>
-                    <div
-                        className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,0))]'}>
-                        <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
-                            <div className={'text-[32px] line-[1.34]'}>ISQQW</div>
+            {
+                list.map((item, index) => {
+                    return <SwiperSlide key={item.banner + index}>
+                        <div className={'w-full h-full relative'}>
                             <div
-                                className={'text-[16px] line-[1.5] pt-[16px]'}>Echarts示例最佳网站、这里有你想象不到的效果图
-                            </div>
-                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3'}>
-                                ECharts是一款强大的数据可视化工具，提供丰富的图表类型和交互体验。我们的社区是ECharts用户交流、学习和分享的平台，您可以在这里：无论您是初学者还是专业人士，这里都是您学习和成长的最佳选择！欢迎加入，共同推动数据可视化的发展。
-                            </div>
-                            <a target={'_blank'} href={'https://www.isqqw.com/'}
-                               className={'mt-auto w-[122px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>官方网址</a>
-                        </div>
-                    </div>
-                    <Image
-                        fill={true}
-                        objectFit={'cover'}
-                        src='/images/yy01.jpg' alt=''></Image>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={'w-full h-full relative'}>
-                    <div
-                        className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,0))]'}>
-                        <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
-                            <div className={'text-[32px] line-[1.34]'}>sa-blog</div>
-                            <div
-                                className={'text-[16px] line-[1.5] pt-[16px]'}>NestJs服务端博客网站
-                            </div>
-                            <div className={'pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3'}>
-                                用来尝试NestJs框架搭建的博客，前端用来尝试一种只提供逻辑的ui组件库，使用到了React、Tailwindcss、Radix
-                                UI、Aceternity UI、Vite、TypeScript、Socket.Io
-                            </div>
-                            <div className={'flex mt-auto'}>
-                                <a target={'_blank'} href={'http://47.93.248.11/home/'}
-                                   className={'w-[122px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>瞧一瞧</a>
-                                <a target={'_blank'} href={'https://gitee.com/yin-chunyang/blog-ui'}
-                                   className={'w-[100px] opacity-60 mx-[10px] h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
-                                    前端
-                                </a>
-                                <a target={'_blank'} href={'https://gitee.com/yin-chunyang/blog-service'}
-                                   className={'w-[100px] opacity-60 h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]'}>
-                                    后端
-                                </a>
-                            </div>
+                                className={'h-full w-full absolute left-0 top-0 z-[2] bg-[linear-gradient(90deg,var(--background),rgba(255,255,255,0))]'}>
+                                <div className={'w-[100%] flex flex-col p-[40px] h-full xl:w-[470px]'}>
+                                    <div className={'text-[32px] line-[1.34]'}>{item.title}</div>
+                                    <div className={'text-[16px] line-[1.5] pt-[16px]'}>
+                                        {item.tip}
+                                    </div>
+                                    <div className={'pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3'}>
+                                        {item.describe}
+                                    </div>
+                                    <div className={'flex mt-auto gap-4'}>
+                                        {
+                                            item.buttons.map((btn,bi)=>{
+                                                return <a key={btn.href} target={'_blank'} href={btn.href}
+                                                                 className={cn('px-5 h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]',btn.opacity)}>{btn.text}</a>
+                                            })
+                                        }
+                                    </div>
 
+                                </div>
+                            </div>
+                            <Image
+                                fill={true}
+                                objectFit={'cover'}
+                                src={item.banner} alt=''></Image>
                         </div>
-                    </div>
-                    <Image
-                        fill={true}
-                        objectFit={'cover'}
-                        src='/images/yy02.jpg' alt=''></Image>
-                </div>
-            </SwiperSlide>
+                    </SwiperSlide>
+                })
+            }
         </Swiper>
+    </div>
+}
+const HomeDataCardCount = () => {
+    return <div
+        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(186,255,16,0.1)_0%,rgba(255,37,243,0.09)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+        <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>6864</div>
+        <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>总访问量</div>
+    </div>
+}
+const HomeDataCardDate = () => {
+    return <div
+        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(255,57,244,0.1)_0%,rgba(45,86,255,0.1)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+        <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>679</div>
+        <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>今日访问</div>
     </div>
 }
 export const HomeData = () => {
@@ -103,7 +142,8 @@ export const HomeData = () => {
                     <HomeDataCardDate></HomeDataCardDate>
                 </div>
             </div>
-            <div className={'h-[400px] xl:flex-1 xl:w-auto w-full xl:ml-[20px] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
+            <div
+                className={'h-[420px] xl:flex-1 xl:w-auto w-full xl:ml-[40px] bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] overflow-hidden'}>
                 <HomeDataSwiper></HomeDataSwiper>
             </div>
         </div>
