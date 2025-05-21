@@ -12,12 +12,13 @@ html[class='dark'] .background {
 }
 
 .content {
+    --background-image:'url()';
     font-family: serif;
     font-size: 16px;
     line-height: 42px;
     text-align: justify;
     letter-spacing: 1px;
     padding: 0 10px;
-    background-image: url(@/public/images/diary-line-border.png);
+    background-image: var(--background-image);
     background-size: 12px 42px;
 }

@@ -1,6 +1,9 @@
 import {cn} from '@/lib/utils';
 import style from './style.module.css'
-import {ReactNode} from "react";
+import React, {ReactNode} from "react";
+import backgroundImage from '@/public/images/diary-line-border.png'
+
+console.log(backgroundImage)
 
 interface Props {
     title: string;
@@ -35,7 +38,7 @@ export const Diary = ({
                 {weather}
             </div>
         </div>
-        <div className={cn(style.content, className3,'cursor-default dark:text-[rgba(255,255,255,.6)]')}>
+        <div style={{'--background-image':`url(${backgroundImage.src})`} as React.CSSProperties} className={cn(style.content, className3,'cursor-default dark:text-[rgba(255,255,255,.6)]')}>
             {content}
         </div>
     </div>
