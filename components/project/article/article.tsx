@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import {ArticleType} from "@/type/article";
+import {cn} from "@/lib/utils";
 
 interface ArticleComponentType extends ArticleType {
     onClick?: (arg0: ArticleType) => void;
+    preview?: boolean;
 }
 
 export const Article = (props: ArticleComponentType) => {
@@ -13,15 +15,15 @@ export const Article = (props: ArticleComponentType) => {
             onClick={() => props.onClick && props.onClick(props)}
             className={'w-full p-[24px] shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] border-[1px] border-[rgba(255,255,255,.15)]'}>
             <div className={'h-[70px] w-full relative'}>
-                <div className={'h-[120px] absolute bottom-0 w-full flex'}>
+                <div className={'h-[120px] absolute bottom-0 w-full block md:flex xl:flex'}>
                     <div
-                        className={'w-[160px] min-w-[160px] h-[120px] relative rounded-[6px] overflow-hidden shadow-[0_0_2px_rgba(0,0,0,0.5)] dark:shadow-[0_0_2px_rgba(255,255,255,.5)]'}>
+                        className={'w-full xl:w-[160px] md:w-[160px] min-w-[160px] h-[120px] relative rounded-[6px] overflow-hidden shadow-[0_0_2px_rgba(0,0,0,0.5)] dark:shadow-[0_0_2px_rgba(255,255,255,.5)]'}>
                         <Image
                             fill={true}
                             objectFit={'cover'}
                             src={props.banner} alt=''></Image>
                     </div>
-                    <div className={'ml-4 flex flex-col justify-center pt-[26px] cursor-pointer flex-1'}>
+                    <div className={'ml-0 md:ml-4 xl:ml-4 flex flex-col justify-center pt-[26px] cursor-pointer flex-1 text-left'}>
                         <div
                             className={'font-bold text-[20px] text-foreground flex-1 max-h-[20px] flex leading-[20px]'}>
                             <div className={'flex-1 w-0 text-nowrap truncate'}>
@@ -32,7 +34,7 @@ export const Article = (props: ArticleComponentType) => {
                     </div>
                 </div>
             </div>
-            <div className={'line-clamp-2 text-foreground text-[14px] leading-[22px] my-4 opacity-65 cursor-pointer'}>
+            <div className={cn('mt-20 xl:mt-4 md:mt-4 text-[14px] leading-[22px] mb-4 text-[rgba(0,0,0,.7)] dark:text-[rgba(255,255,255,.7)] cursor-pointer text-left',props.preview ? 'h-auto' : 'line-clamp-2 h-[44px]')}>
                 {props.describe}
             </div>
             <div className={'flex'}>
