@@ -70,7 +70,7 @@ const WriteButton = ({date}: { date: Date }) => {
 }
 const DateList = ({date, onClick}: { date: Date, onClick: (arg0: DiaryType) => void }) => {
     const [selected, setSelected] = useState<DiaryType['id']>();
-    const [list, setList] = useState<DiaryType[]>([
+    const [list] = useState<DiaryType[]>([
         {
             id: '1',
             title: '春秋半夏',

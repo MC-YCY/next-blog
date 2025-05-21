@@ -2,7 +2,14 @@
 
 import React, {forwardRef, useEffect, useImperativeHandle, useRef, useState,} from 'react';
 import styles from "./styles/calendar.module.css";
-import {CalendarProps, dateTableRow, dateTableType, defaultProps, refMethods} from './types';
+import {
+    CalendarProps,
+    dateTableCell,
+    dateTableRow,
+    dateTableType,
+    defaultProps,
+    refMethods
+} from './types';
 import {getDateTable} from './composition/dateToTable';
 import CalendarRow from './calendar.row';
 import CalendarWeek from './calendar.week';
@@ -28,7 +35,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
     useImperativeHandle(ref, () => ({
         dateTable: DayList,
     }));
-    const setStyleCellHeight = (): Record<string, any> => {
+    const setStyleCellHeight = (): Record<string, string | null | number> => {
         let cellH: string | null;
         if ('open' in props) {
             if (props.cellHeight) cellH = props.cellHeight + 'px';
@@ -55,7 +62,11 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         }
     }
     const [isDown, setIsDown] = useState<boolean>(false);
-    const [mouseEvent, setMouseEvent] = useState<any>({
+    const [mouseEvent, setMouseEvent] = useState<{
+        startY: number,
+        moveY: number,
+        endY: number,
+    }>({
         startY: 0,
         moveY: 0,
         endY: 0,
@@ -65,7 +76,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
     const calendarTable = useRef<HTMLDivElement>(null);
     const calendarLayer = useRef<HTMLDivElement>(null);
     const mouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if(!props.openEvent) return;
+        if (!props.openEvent) return;
         if (!('open' in props)) return;
         setIsDown(true);
         setMoveNum(0);
@@ -74,9 +85,11 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         setMouseEvent(deepClone(mouseEvent));
         setClearTransition(false);
     }
-    const mouseUp = (_: any, record: any) => {
-        if(!props.openEvent) {
-            props.onClick && props.onClick(record);
+    const mouseUp = (_: React.MouseEvent, record: dateTableCell) => {
+        if (!props.openEvent) {
+            if(props.onClick instanceof Function){
+                props.onClick(record);
+            }
             return;
         }
         setIsDown(false);
@@ -108,7 +121,7 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         setClearTransition(false);
     }
     const mouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if(!props.openEvent) return;
+        if (!props.openEvent) return;
         if (!isDown) return;
         setMoveNum(moveNum + 1);
         if (moveNum > 5) {
@@ -179,4 +192,4 @@ export const Calendar = forwardRef<refMethods, CalendarProps>((props, ref) => {
         </div>
     </div>
 })
-Calendar.displayName='Calendar';
+Calendar.displayName = 'Calendar';

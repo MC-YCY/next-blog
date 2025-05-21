@@ -1,6 +1,6 @@
 'use client';
 
-import React, {JSX, ReactNode, useEffect, useState} from "react";
+import React, {ReactNode, useEffect, useState} from "react";
 import {cn} from '@/lib/utils'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {FreeMode} from 'swiper/modules';
@@ -14,8 +14,9 @@ interface PartTitleProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const PartTitle = ({title, description, action, ...props}: PartTitleProps) => {
     return (
-        <div  {...props} className={cn("w-full items-center block lg:flex",props.className)} title="">
-            <div className={cn("text-[32px] h-[32px] flex items-center text-nowrap cursor-default",props.titleclassname)}>
+        <div  {...props} className={cn("w-full items-center block lg:flex", props.className)} title="">
+            <div
+                className={cn("text-[32px] h-[32px] flex items-center text-nowrap cursor-default", props.titleclassname)}>
                 {title}
             </div>
             {description && (

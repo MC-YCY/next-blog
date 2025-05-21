@@ -17,7 +17,7 @@ const PictureSwiper = ({setPreview}: { setPreview: (arg0: PictureType) => void }
     const setStates = (state: PictureType) => {
         setPreview(state)
     }
-    const [list, setList] = useState<PictureType[]>([
+    const [list] = useState<PictureType[]>([
         {
             name: 'ISQQW',
             tip: '是简简单单的欣赏',

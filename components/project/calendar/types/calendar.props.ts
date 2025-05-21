@@ -1,7 +1,7 @@
-import {dateTableRow, dateTableType} from './date.table.ts';
-import {weekDataItemType} from '../composition/dateListMethod.ts';
-import {dateTableCell} from './date.table.ts';
-import React from "react";
+import {dateTableRow, dateTableType} from './date.table';
+import {weekDataItemType} from '../composition/dateListMethod';
+import {dateTableCell} from './date.table';
+import React, {JSX} from "react";
 
 export interface renderCustom {
     customWeek?: (arg0: weekDataItemType) => JSX.Element,
@@ -11,14 +11,14 @@ export interface renderCustom {
 export interface CalendarProps extends renderCustom {
     date: Date,
     firstDayOfWeek: number,
-    openEvent?:boolean,
+    openEvent?: boolean,
     isFixedRows?: boolean,
-    taskData?: Record<string, any>[],
+    taskData?: Record<string, string | number>[],
     taskDataDateMap?: string,
     open?: boolean,
     cellHeight?: number,
     onChange?: (arg0: CalendarProps, arg1: dateTableType) => void,
-    onClick?: (arg0: any) => void,
+    onClick?: (arg0: dateTableCell) => void,
     onToggle?: (arg0: boolean) => void
 }
 

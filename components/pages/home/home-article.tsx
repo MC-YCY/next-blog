@@ -15,7 +15,7 @@ import {
 import {SpanButton} from "@/components/ui/button";
 
 export const HomeArticle = () => {
-    const [articleList, setArticleList] = useState<ArticleType[]>([
+    const [articleList] = useState<ArticleType[]>([
         {
             banner: '/images/34986_light.png',
             title: 'NestJs&React博客',

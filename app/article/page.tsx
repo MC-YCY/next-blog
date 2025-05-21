@@ -61,7 +61,7 @@ const ArticlePage = () => {
         {label: 'JavaScript', value: 'js'},
     ]
     const onLoad = () => {
-        let n = [...articleList];
+        const n = [...articleList];
         n.length = 3;
         setArticleList([...articleList, ...n])
     }

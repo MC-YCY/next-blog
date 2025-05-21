@@ -28,7 +28,7 @@ const PicturePageItem = ({item, index}: { item: PictureType, index: number }) =>
 }
 
 const PicturePage = () => {
-    const [list, setList] = useState<PictureType[]>([
+    const [list] = useState<PictureType[]>([
         {
             name: 'ISQQW',
             tip: '是简简单单的欣赏',

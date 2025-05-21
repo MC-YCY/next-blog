@@ -4,9 +4,9 @@ import styles from './styles/calendar.module.css';
 
 const renderCell = (record:dateTableCell,customDay:CalendarRowProps['customDay']):JSX.Element =>{
     const today = new Date();
-    let ty = today.getFullYear();
-    let tm = today.getMonth();
-    let td = today.getDate();
+    const ty = today.getFullYear();
+    const tm = today.getMonth();
+    const td = today.getDate();
     if(customDay) return customDay(record);
     let className: string = `${styles.calendarRowCellRect} `;
     if(record.status !== 1){
