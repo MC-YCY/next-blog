@@ -31,15 +31,23 @@ export const ProjectCard = (props: ProjectCardProps) => {
                 <div className={'mt-[12px] text-foreground text-[14px]'}>{props.tip}</div>
 
                 <div className={'flex justify-between pt-[20px]'}>
-                    <div
-                        className={'relative  w-[88px] h-[48px] rounded-[12px] overflow-hidden cursor-pointer flex items-center justify-center'}>
-                        <div className={'absolute inset-0 bg-foreground opacity-6 z-0'}></div>
-                        <IconCode width={24} height={24} className={'text-foreground opacity-80'}></IconCode>
-                    </div>
-                    <div
-                        className={'cursor-pointer flex-1 ml-[16px] h-[48px] bg-foreground text-background rounded-[12px] flex items-center justify-center text-base hover:opacity-80 transition'}>
-                        Look one Look
-                    </div>
+                    {
+                        props.code && <a
+                            target="_blank"
+                            href={props.code}
+                            className={'relative  w-[88px] h-[48px] rounded-[12px] overflow-hidden cursor-pointer flex items-center justify-center'}>
+                            <span className={'absolute inset-0 bg-foreground opacity-6 z-0'}></span>
+                            <IconCode width={24} height={24} className={'text-foreground opacity-80'}></IconCode>
+                        </a>
+                    }
+                    {
+                        props.url && <a
+                            target="_blank"
+                            href={props.url}
+                            className={'cursor-pointer flex-1 ml-[16px] h-[48px] bg-foreground text-background rounded-[12px] flex items-center justify-center text-base hover:opacity-80 transition'}>
+                            Look one Look
+                        </a>
+                    }
                 </div>
             </div>
         </div>
