@@ -121,7 +121,7 @@ export const PictureSwiperItemContent = (props: PictureSwiperItemContentType) =>
                 <div className="w-full xl:w-[470px] flex flex-col p-[40px] ml-auto">
                     <h2 className="text-[32px] leading-[1.34]">{current.name}</h2>
                     <p className="text-[16px] leading-[1.5] pt-[16px] line-clamp-2">{dayjs(current.date).format('YYYY/MM/DD')}-{current.tip}</p>
-                    <p className="pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-4 xl:line-clamp-none md:line-clamp-none">
+                    <p className="pt-[16px] text-[16px] text-foreground line-clamp-4 xl:line-clamp-none md:line-clamp-none text-shadow-lg">
                         {current.describe}
                     </p>
                 </div>
