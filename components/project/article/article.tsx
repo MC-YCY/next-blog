@@ -10,10 +10,10 @@ interface ArticleComponentType extends ArticleType {
 }
 
 export const Article = (props: ArticleComponentType) => {
-    return <div className={'w-full pt-[28px]'}>
+    return <div className={cn('w-full pt-[28px]', props.preview && 'max-h-[70vh] overflow-y-auto')}>
         <div
             onClick={() => props.onClick && props.onClick(props)}
-            className={'w-full p-[24px] shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)] rounded-[14px] border-[1px] border-[rgba(255,255,255,.15)]'}>
+            className={cn('w-full p-[24px]  rounded-[14px] border-[1px] border-[rgba(255,255,255,.15)]', !props.preview && 'shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]')}>
             <div className={'h-[70px] w-full relative'}>
                 <div className={'h-[120px] absolute bottom-0 w-full block md:flex xl:flex'}>
                     <div
@@ -23,7 +23,8 @@ export const Article = (props: ArticleComponentType) => {
                             objectFit={'cover'}
                             src={props.banner} alt=''></Image>
                     </div>
-                    <div className={'ml-0 md:ml-4 xl:ml-4 flex flex-col justify-center pt-[26px] cursor-pointer flex-1 text-left'}>
+                    <div
+                        className={'ml-0 md:ml-4 xl:ml-4 flex flex-col justify-center pt-[26px] cursor-pointer flex-1 text-left'}>
                         <div
                             className={'font-bold text-[20px] text-foreground flex-1 max-h-[20px] flex leading-[20px]'}>
                             <div className={'flex-1 w-0 text-nowrap truncate'}>
@@ -34,7 +35,8 @@ export const Article = (props: ArticleComponentType) => {
                     </div>
                 </div>
             </div>
-            <div className={cn('mt-20 xl:mt-4 md:mt-4 text-[14px] leading-[22px] mb-4 text-[rgba(0,0,0,.7)] dark:text-[rgba(255,255,255,.7)] cursor-pointer text-left',props.preview ? 'h-auto' : 'line-clamp-2 h-[44px]')}>
+            <div
+                className={cn('mt-20 xl:mt-4 md:mt-4 text-[14px] leading-[22px] mb-4 relative text-[rgba(0,0,0,.7)] dark:text-[rgba(255,255,255,.7)] cursor-pointer text-left', props.preview ? 'h-auto' : 'line-clamp-2 h-[44px]')}>
                 {props.describe}
             </div>
             <div className={'flex'}>

@@ -13,6 +13,7 @@ import {
     DrawerTitle,
 } from "@/components/ui/drawer";
 import {SpanButton} from "@/components/ui/button";
+import {CodeBlock} from "@/components/ui/code-block";
 
 export const HomeArticle = () => {
     const [articleList] = useState<ArticleType[]>([
@@ -52,10 +53,90 @@ export const HomeArticle = () => {
             describe: <>
                <div>地图标注、图片标注、标注边界判断
                    标注图形有矩形、多边形、圆形、线路
-                   可展示图形的面积、线路的长度
+                   可展示图形的面积、线路的长度;
                </div>
-                <div className={'mt-4'}>https://gitee.com/yin-chunyang/mars3d-marker</div>
                 <div>使用简单，你可以这样</div>
+               <CodeBlock
+                   className='pt-0 pl-1 pb-2 mt-4'
+                   language="ts"
+                   filename="demo.ts"
+                   code={`const initMap = async () => {
+  mapInstance.instance = new mars3d.Map("container", config)
+
+  mapInstance.imgLayer = await addImageLayer(mapInstance.instance, {
+    name: '防变形图片',
+    url: banner,
+    center: {lng: 119.031399, lat: 33.597401}, // 你的实际中心点
+  })
+
+  installMapMarkerLayer(mapInstance.instance, mapInstance.imgLayer, {
+    buttonElement: {
+      rectangle: document.querySelector('#mark-buts-1'),
+      polygon: document.querySelector('#mark-buts-2'),
+      circle: document.querySelector('#mark-buts-3'),
+      polyline: document.querySelector('#mark-buts-4'),
+    },
+    shapeConfig: {
+      shapeArea: true,
+      polylineLength: true,
+    }
+  });
+  installMapMarkerButton();
+  drawEcho(defaultData)
+}`}
+               />
+                <div className={'mt-4'}>需要绘制结束后有个弹窗，或其他操作可以这样</div>
+                <div className={'mt-4 pl-4 border-l-2 border-l-foreground'}>图形绘制的回调，会在图形点击、双击、编辑结束、编辑移动中触发，使用时可根据type判断时机</div>
+                <CodeBlock
+                    className='pt-0 pl-1 pb-2 mt-4'
+                    language="ts"
+                    filename="demo.ts"
+                    code={`const {
+  installMapMarkerLayer,
+  getResult,
+  drawEcho,
+  beginRectangle,
+  beginPolygon,
+  beginCircle,
+  beginPolyline,
+} = mapMark()
+
+const customShape1 = (event) =>{
+  beginRectangle(event,(type, shape, state, props)=>{
+console.log('触发时机类型',type);
+console.log(shape);   //  图形对象
+console.log(state);   //  可根据图形对象修改存储数据
+console.log(props);   // 初始化的配置项
+  })
+}
+
+const customShape2 = (event) =>{
+  beginPolygon(event,(type, shape, state, props)=>{
+console.log('触发时机类型',type);
+console.log(shape);   //  图形对象
+console.log(state);   //  可根据图形对象修改存储数据
+console.log(props);   // 初始化的配置项
+  })
+}
+
+const customShape3 = (event) =>{
+  beginCircle(event,(type, shape, state, props)=>{
+console.log('触发时机类型',type);
+console.log(shape);   //  图形对象
+console.log(state);   //  可根据图形对象修改存储数据
+console.log(props);   // 初始化的配置项
+  })
+}
+
+const customShape4 = (event) =>{
+  beginPolyline(event,(type, shape, state, props)=>{
+console.log('触发时机类型',type);
+console.log(shape);   //  图形对象
+console.log(state);   //  可根据图形对象修改存储数据
+console.log(props);   // 初始化的配置项
+  })
+}`}
+                />
             </>,
             tags: '项目/全栈博客'
         },
@@ -80,7 +161,7 @@ export const HomeArticle = () => {
         <PartTitle title={'一些"小作文"'}
                    description={'天天看各种框架比较，看的是瑟瑟发抖...'}></PartTitle>
         <Drawer open={previewOpen} onClose={() => setPreviewOpen(false)}>
-            <DrawerContent className={'max-h-[60vh]'}>
+            <DrawerContent>
                 <DrawerHeader>
                     <DrawerTitle></DrawerTitle>
                     <Article preview={true} {...current}></Article>
