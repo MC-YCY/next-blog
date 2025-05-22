@@ -18,8 +18,8 @@ export const HomeHeroContent = () => {
 
                     <div className='mt-[24px] cursor-default pl-[8px]'>
                         <Diary
-                            className1={'bg-[rgba(255,255,255,.6)] dark:bg-[rgba(0,0,0,.3)]'}
-                            className2={'bg-[rgba(255,255,255,.4)] dark:bg-[rgba(0,0,0,.3)]'}
+                            className1={'bg-[rgba(255,255,255,.8)] dark:bg-[rgba(0,0,0,.5)]'}
+                            className2={'bg-[rgba(255,255,255,.8)] dark:bg-[rgba(0,0,0,.5)]'}
                             title={'春秋半夏'}
                             date={'2025/5/15'}
                             weather={<IconSunFilled width={24} height={24} color={'#ecca2f'}/>}
@@ -97,16 +97,12 @@ export const HomeHero = () =>{
             fill={true}
             objectFit={'cover'}
             className={'home-dark-banner'}
-            src='/images/34986_dark.png' alt=''></Image>
+            src='/images/article-banner/hua_dark.png' alt=''></Image>
         <Image
             fill={true}
             objectFit={'cover'}
             className={'home-light-banner'}
-            src='/images/34986_light.png' alt=''></Image>
+            src='/images/article-banner/hua.png' alt=''></Image>
         <HomeHeroContent></HomeHeroContent>
-        <div
-            className='absolute w-[27vw] h-[27vw] bg-[#c29f92] dark:bg-[#293558] left-[5.46vw] bottom-[10vh] rounded-[50%] opacity-30'></div>
-        <div
-            className='absolute w-[11vw] h-[11vw] bg-[#daaf9d] dark:bg-[#566fa8] left-[40.33vw] bottom-[20vh] rounded-[50%] opacity-20'></div>
     </div>
 }
