@@ -83,7 +83,7 @@ const ArticlePage = () => {
                 <DrawerContent>
                     <DrawerHeader>
                         <DrawerTitle></DrawerTitle>
-                        <Article {...current}></Article>
+                        <Article preview={true} {...current}></Article>
                     </DrawerHeader>
                     <DrawerFooter>
                         <DrawerClose>
