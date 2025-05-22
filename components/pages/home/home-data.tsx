@@ -96,7 +96,7 @@ const HomeDataSwiper = () => {
                                     </div>
                                     <div className={'flex mt-auto gap-4'}>
                                         {
-                                            item.buttons.map((btn,bi)=>{
+                                            item.buttons.map((btn)=>{
                                                 return <a key={btn.href} target={'_blank'} href={btn.href}
                                                                  className={cn('px-5 h-[48px] rounded-[8px] bg-foreground text-background flex justify-center items-center text-[14px]',btn.opacity)}>{btn.text}</a>
                                             })

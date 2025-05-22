@@ -18,7 +18,7 @@ const ArticlePage = () => {
             describe: <>
                 <div>用来尝试NestJs框架搭建的博客，NestJS 作为一款渐进式 Node.js 框架，凭借其企业级架构设计与开箱即用的生态，成为我开发博客后端服务的核心选择。其模块化设计（@Module）与依赖注入（DI）机制，使得代码分层清晰，结合TypeORM实现数据层高效管理，JWT与Passport模块无缝集成身份认证，保障系统安全。通过@nestjs/swagger自动生成 API 文档，配合Redis缓存与Throttler限流，显著提升接口性能。NestJS 深度整合 TypeScript 的强类型特性，结合class-validator实现请求数据验证，减少潜在错误。无论是基于Express的高并发处理能力，还是通过WebSocket实现实时交互，NestJS 都为博客系统提供了灵活、可维护的架构基础，完美支撑从用户管理到内容发布的全场景需求。</div>
                 <div className={'mt-4'}>前端用来尝试一种只提供逻辑的ui组件库，使用到了React、Tailwindcss、Radix UI、Aceternity UI、Vite、TypeScript、Socket.Io</div>
-                <div className={'mt-4 pl-4 border-l-2 border-l-foreground'}>目前流行的 "只提供逻辑" 的 UI 组件库（也称为Headless UI或逻辑层组件库）越来越受欢迎。这类库专注于提供无样式的核心交互逻辑和可访问性（a11y），将视觉样式的控制权完全交给开发者，特别适合需要深度定制设计系统的项目。</div>
+                <div className={'mt-4 pl-4 border-l-2 border-l-foreground'}>目前流行的 只提供逻辑 的 UI 组件库（也称为Headless UI或逻辑层组件库）越来越受欢迎。这类库专注于提供无样式的核心交互逻辑和可访问性（a11y），将视觉样式的控制权完全交给开发者，特别适合需要深度定制设计系统的项目。</div>
                 <div className={'mt-4'}>
                     <li>在线预览    http://47.93.248.11/home</li>
                     <li>博客前端    https://gitee.com/yin-chunyang/blog-ui</li>

@@ -61,8 +61,8 @@ export const HomeCode = () => {
                 }}
             >
                 {
-                    list.map((item)=>{
-                        return <SwiperSlide className={'w-[100%]! md:!w-[calc(50%-10px)] xl:!w-[calc(33.33%-14px)]'}>
+                    list.map((item,index)=>{
+                        return <SwiperSlide key={item.banner+index} className={'w-[100%]! md:!w-[calc(50%-10px)] xl:!w-[calc(33.33%-14px)]'}>
                             <ProjectCard project={item.name} date={item.date} tip={item.tip}
                                          banner={item.banner} code={item.git} url={item.preview}></ProjectCard>
                         </SwiperSlide>
