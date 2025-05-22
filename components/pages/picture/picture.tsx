@@ -17,6 +17,7 @@ import {useEffect, useRef, useState} from "react";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {cn} from "@/lib/utils";
 import {AnimatePresence, motion} from "framer-motion";
+import dayjs from "dayjs";
 
 export interface PictureSwiperItemContentOptionsType extends PictureType {
     setStates: (arg0: PictureType) => void;
@@ -41,10 +42,11 @@ export const PicturePreview = (current: PictureType) => {
         <DrawerContent>
             <DrawerHeader>
                 <DrawerTitle>{current?.name}</DrawerTitle>
-                <div className={'h-[calc(100vh-200px)] relative'}>
+                <div className={'h-[calc(100vh-200px)] overflow-y-auto relative'}>
                     {current?.url && <Image
                         fill
-                        objectFit="cover"
+                        objectFit={'cover'}
+                        className={'object-[50%_30%]'}
                         src={current?.url}
                         alt=""
                         priority
@@ -84,7 +86,7 @@ export const PictureSwiperItemContentOptions = (props: PictureSwiperItemContentO
                     <div className={cn('h-[100px] relative bg-[rgba(0,0,0,.65)] transition-[all_0.3s_linear]')}
                          onClick={() => props.setStates(item)}>
                         <Image
-                            className={cn(item.url === props.active ? 'opacity-100' : 'opacity-50', 'transition-[opacity_0.3s_linear]')}
+                            className={cn(item.url === props.active ? 'opacity-100' : 'opacity-50', 'transition-[opacity_0.3s_linear] object-[50%_30%]')}
                             fill={true}
                             objectFit={'cover'}
                             src={item.url} alt=''></Image>
@@ -118,8 +120,8 @@ export const PictureSwiperItemContent = (props: PictureSwiperItemContentType) =>
                 </div>
                 <div className="w-full xl:w-[470px] flex flex-col p-[40px] ml-auto">
                     <h2 className="text-[32px] leading-[1.34]">{current.name}</h2>
-                    <p className="text-[16px] leading-[1.5] pt-[16px]">{current.tip}</p>
-                    <p className="pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-3">
+                    <p className="text-[16px] leading-[1.5] pt-[16px] line-clamp-2">{dayjs(current.date).format('YYYY/MM/DD')}-{current.tip}</p>
+                    <p className="pt-[16px] text-[16px] text-foreground opacity-60 line-clamp-4 xl:line-clamp-none md:line-clamp-none">
                         {current.describe}
                     </p>
                 </div>
@@ -138,6 +140,7 @@ export const PictureSwiperItemContent = (props: PictureSwiperItemContentType) =>
                     <Image
                         fill
                         objectFit="cover"
+                        className={'object-[50%_30%]'}
                         src={current.url}
                         alt=""
                         priority
