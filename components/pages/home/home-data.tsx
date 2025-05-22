@@ -27,17 +27,17 @@ const list = [
         banner: '/images/data-slide/sa-blog-banner.jpg',
         buttons: [
             {
-                text: '瞧一瞧',
+                text: '预览',
                 href: 'http://47.93.248.11/home/',
                 opacity: 'opacity-100'
             },
             {
-                text: 'web-git',
+                text: 'git',
                 href: 'https://gitee.com/yin-chunyang/blog-ui',
                 opacity: 'opacity-60'
             },
             {
-                text: 'service-git',
+                text: 'git',
                 href: 'https://gitee.com/yin-chunyang/blog-service',
                 opacity: 'opacity-60'
             }
@@ -50,17 +50,12 @@ const list = [
         banner: '/images/data-slide/next-blog-banner.jpg',
         buttons: [
             {
-                text: '需要点科学手段',
-                href: 'https://next-blog-xi-five-22.vercel.app/',
+                text: '预览',
+                href: 'https://682ebcb8dd766bbffd257727--sa-next-blog.netlify.app/',
                 opacity: 'opacity-100'
             },
             {
-                text: 'Go',
-                href: 'http://47.93.248.11:3002/',
-                opacity: 'opacity-100'
-            },
-            {
-                text: 'Github',
+                text: 'git',
                 href: 'https://github.com/MC-YCY/next-blog',
                 opacity: 'opacity-60'
             }
