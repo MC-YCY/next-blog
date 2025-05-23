@@ -217,11 +217,13 @@ body, html {
     color: #4b944c;
 }
 
-.light .theme-codeblock .token[style='color:#96CBFE'] {
+.light .theme-codeblock .token[style='color:#96CBFE'],
+.light .theme-codeblock .token[style='color: rgb(150, 203, 254)'] {
     color: #4b944c !important;
 }
 
-.theme-codeblock .token[style='color:#FFFFB6;text-decoration:underline'] {
+.theme-codeblock .token[style='color:#FFFFB6;text-decoration:underline'],
+.theme-codeblock .token[style='color: rgb(255, 255, 182); text-decoration: underline']{
     text-decoration: none !important;
 }
 
