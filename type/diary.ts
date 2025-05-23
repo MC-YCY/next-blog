@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
 
 export interface DiaryType{
-    id:string,
+    id?:string,
     title:string,
     date:string | Date,
     weather:string | ReactNode,
