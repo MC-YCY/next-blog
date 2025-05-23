@@ -18,8 +18,8 @@ export const HomeHeroContent = () => {
 
                     <div className='mt-[24px] cursor-default pl-[8px]'>
                         <Diary
-                            className1={'bg-[rgba(255,255,255,.8)] dark:bg-[rgba(0,0,0,.5)]'}
-                            className2={'bg-[rgba(255,255,255,.8)] dark:bg-[rgba(0,0,0,.5)]'}
+                            className1={'bg-[rgba(255,255,255,.65)] dark:bg-[rgba(0,0,0,.6)]'}
+                            className2={'bg-[rgba(255,255,255,.65)] dark:bg-[rgba(0,0,0,.6)]'}
                             title={'春秋半夏'}
                             date={'2025/5/15'}
                             weather={<IconSunFilled width={24} height={24} color={'#ecca2f'}/>}
@@ -65,7 +65,7 @@ export const HomeHeroContent = () => {
             </div>
             <div className='rounded-md mt-8 md:mt-0 aos-init aos-animate max-w-[100%] hidden lg:block'>
                 <CodeBlock
-                    className='bg-[rgba(25,25,25,.8)] shadow-2xl pt-0 pl-1 pb-2'
+                    className='theme-codeblock shadow-2xl pt-0 pl-1 pb-2'
                     language="ts"
                     filename="Developer.ts"
                     code={`class Developer {
