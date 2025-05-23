@@ -113,14 +113,14 @@ const HomeDataSwiper = () => {
 }
 const HomeDataCardCount = () => {
     return <div
-        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(186,255,16,0.1)_0%,rgba(255,37,243,0.09)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(196,255,255,0.4)_0%,rgba(190,83,69,0.4)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
         <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>6864</div>
         <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>总访问量</div>
     </div>
 }
 const HomeDataCardDate = () => {
     return <div
-        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(255,57,244,0.1)_0%,rgba(45,86,255,0.1)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
+        className={'h-full flex flex-col justify-center xl:py-[32px] xl:px-[40px] pl-4 pt-2 bg-[linear-gradient(121deg,rgba(239,184,174,0.4)_0%,rgba(127,156,76,0.4)_100%)] rounded-[14px] cursor-pointer  bg-background shadow-[0_0_10px_rgba(0,0,0,0.2)] dark:shadow-[0_0_8px_rgba(255,255,255,.1)]'}>
         <div className={'text-[24px] xl:text-[64px] h-[24px] xl:h-[64px] flex items-center text-foreground'}>679</div>
         <div className={'text-[16px] h-[16px] flex items-center my-[10px] text-foreground'}>今日访问</div>
     </div>
