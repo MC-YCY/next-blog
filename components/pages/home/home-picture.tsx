@@ -125,6 +125,113 @@ const PictureSwiper = ({setPreview}: { setPreview: (arg0: PictureType) => void }
                     url: '/images/演员/黎晟萱/group-a-3.jpg',
                 },
             ]
+        },
+        {
+            name: '邢暖',
+            tip: '是简简单单的欣赏',
+            describe: '',
+            date: '2025/5/26',
+            url: '/images/演员/邢暖/mmexport1748234645314.jpeg',
+            children: [
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234645314.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234645635.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234645762.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234646129.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234646387.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234646793.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234647097.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234647318.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234647439.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234647807.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234647923.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234648063.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234648287.jpeg',
+                },
+                {
+                    name: '邢暖',
+                    tip: '是简简单单的欣赏',
+                    describe: '',
+                    date: '2025/5/26',
+                    url: '/images/演员/邢暖/mmexport1748234648802.jpeg',
+                },
+            ]
         }
     ]);
     return <div

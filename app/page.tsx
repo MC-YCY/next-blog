@@ -11,8 +11,8 @@ export default function Home() {
     return <div>
         <HomeHero></HomeHero>
         <HomeData></HomeData>
-        <HomeCode></HomeCode>
         <HomeDiary></HomeDiary>
+        <HomeCode></HomeCode>
         <HomeArticle></HomeArticle>
         <HomePicture></HomePicture>
     </div>

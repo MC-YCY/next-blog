@@ -1,6 +1,7 @@
 'use client'
 import style from './style.module.css';
 import {cn} from "@/lib/utils";
+import React from "react";
 
 export const Signature = () => {
     return <svg
@@ -52,9 +53,9 @@ export const SignatureGradation = ({className}:{className?:string}) => {
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#912714"/>
+                <stop offset="50%" stopColor="#385f00"/>
+                <stop offset="100%" stopColor="#366d6a"/>
             </linearGradient>
 
             {/* 流光特效 */}

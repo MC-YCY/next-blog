@@ -174,7 +174,7 @@ console.log(props);   // 初始化的配置项
             </DrawerContent>
         </Drawer>
         <div className={'mt-3 xl:mt-6'}>
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[20px_20px]">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[32px_32px]">
                 {
                     articleList.map((article, index) => {
                         return <div key={'home-article' + index}>
@@ -184,7 +184,7 @@ console.log(props);   // 初始化的配置项
                 }
             </div>
         </div>
-        <div className={'flex justify-center mt-[20px]'}>
+        <div className={'flex justify-center mt-[28px]'}>
             <div onClick={goArticle}
                  className={'cursor-pointer opacity-55 w-[120px] h-[36px] flex justify-center items-center text-foreground border-[1px] border-foreground rounded-[36px] text-[14px]'}>查看更多
             </div>

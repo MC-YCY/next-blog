@@ -6,6 +6,7 @@
 .active path {
     stroke: url(#cyberGradient);
     fill: url(#cyberGradient);
+    stroke-width: 6px;
 }
 
 .header {

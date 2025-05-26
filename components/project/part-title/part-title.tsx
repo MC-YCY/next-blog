@@ -20,7 +20,7 @@ export const PartTitle = ({title, description, action, ...props}: PartTitleProps
                 {title}
             </div>
             {description && (
-                <div className="text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-2 cursor-default">
+                <div className="text-base opacity-70 text-[14px] h-[14px] flex items-center ml-2 my-4 cursor-default">
                     {description}
                 </div>
             )}

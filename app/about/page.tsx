@@ -20,12 +20,15 @@ const AboutPage = () => {
             <div className={'pl-[8px]'}>
                 <Diary title={'《代码苍穹：计算机的奇幻征途》'} date={'2025/5/20'}
                        weather={<IconSunFilled width={24} height={24} color={'#ecca2f'}/>} content={
-                    <><p>tip:豆包生成</p><>
+                    <>
                         {texts.map((text, index) => {
-                            return <p className={cn('indent-[2em] cursor-pointer mt-[42px]')}
+                            let mt = ` mt-[42px]`;
+                            if (index === 0) {
+                                mt = '';
+                            }
+                            return <p className={cn('indent-[2em] cursor-pointer', mt)}
                                       key={index + 'about-text'}>{text}</p>;
                         })}
-                    </>
                     </>
                 }></Diary>
             </div>

@@ -18,9 +18,9 @@ export const HomeTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement>
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#4c9448"/>
+                <stop offset="50%" stopColor="#912714"/>
+                <stop offset="100%" stopColor="#8f993c"/>
             </linearGradient>
 
             {/* 流光特效 */}
@@ -53,9 +53,9 @@ export const ArticleTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGEleme
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#4c9448"/>
+                <stop offset="50%" stopColor="#912714"/>
+                <stop offset="100%" stopColor="#8f993c"/>
             </linearGradient>
 
             {/* 流光特效 */}
@@ -91,9 +91,9 @@ export const DiaryTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#4c9448"/>
+                <stop offset="50%" stopColor="#912714"/>
+                <stop offset="100%" stopColor="#8f993c"/>
             </linearGradient>
 
             {/* 流光特效 */}
@@ -134,9 +134,9 @@ export const PictureTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGEleme
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#4c9448"/>
+                <stop offset="50%" stopColor="#912714"/>
+                <stop offset="100%" stopColor="#8f993c"/>
             </linearGradient>
 
             {/* 流光特效 */}
@@ -181,9 +181,9 @@ export const AboutTextSvgIcon = (props: React.ButtonHTMLAttributes<SVGSVGElement
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0%" stopColor="#00F2FE"/>
-                <stop offset="50%" stopColor="#4FACFE"/>
-                <stop offset="100%" stopColor="#845EC2"/>
+                <stop offset="0%" stopColor="#4c9448"/>
+                <stop offset="50%" stopColor="#912714"/>
+                <stop offset="100%" stopColor="#8f993c"/>
             </linearGradient>
 
             {/* 流光特效 */}
