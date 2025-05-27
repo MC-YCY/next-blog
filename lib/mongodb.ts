@@ -1,21 +1,16 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient } from 'mongodb'
 
-const uri = process.env.MONGODB_URI!;
-const options = {};
+const uri = process.env.MONGODB_URI!
+const options = {}
 
-let client: MongoClient;
-let clientPromise: Promise<MongoClient>;
-
+// 在全局缓存 MongoClient 连接，避免热重载建立多个连接
 declare global {
     // eslint-disable-next-line no-var
-    var _mongoClientPromise: Promise<MongoClient>;
+    var _mongoClientPromise: Promise<MongoClient>
 }
 
-if (!global._mongoClientPromise) {
-    client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect();
-}
+// 新建/复用全局连接 Promise
+const clientPromise: Promise<MongoClient> = global._mongoClientPromise ||
+    (global._mongoClientPromise = new MongoClient(uri, options).connect())
 
-clientPromise = global._mongoClientPromise;
-
-export default clientPromise;
+export default clientPromise
