@@ -6,6 +6,7 @@ import {HomeHero} from "@/components/pages/home/home-hero";
 import {HomeDiary} from "@/components/pages/home/home-diary";
 import {HomeArticle} from "@/components/pages/home/home-article";
 import {HomePicture} from "@/components/pages/home/home-picture";
+import {HomeMessageBoard} from "@/components/pages/home/home-message-board";
 
 export default function Home() {
     return <div>
@@ -15,5 +16,6 @@ export default function Home() {
         <HomeCode></HomeCode>
         <HomeArticle></HomeArticle>
         <HomePicture></HomePicture>
+        <HomeMessageBoard></HomeMessageBoard>
     </div>
 }

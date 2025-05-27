@@ -4,14 +4,16 @@
 @import 'swiper/css/free-mode';
 @import 'swiper/css/scrollbar';
 @import "swiper/css/effect-cards";
-
-.custom-swiper-scrollbar {
+@import 'swiper/css/pagination';
+@import 'swiper/css/grid';
+.custom-swiper-scrollbar,.custom-swiper-scrollbar-bottom {
     position: relative;
     margin-bottom: 4px;
     background: transparent;
 }
 
-.custom-swiper-scrollbar:after {
+.custom-swiper-scrollbar:after,
+.custom-swiper-scrollbar-bottom:after{
     content: '';
     display: block;
     position: absolute;
@@ -24,7 +26,8 @@
     opacity: .06;
 }
 
-.custom-swiper-scrollbar .swiper-scrollbar-drag {
+.custom-swiper-scrollbar .swiper-scrollbar-drag,
+.custom-swiper-scrollbar-bottom .swiper-scrollbar-drag {
     background: var(--primary);
     opacity: .5;
 }

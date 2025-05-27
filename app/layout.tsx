@@ -5,6 +5,8 @@ import React from "react";
 import {ThemeProvider} from 'next-themes'
 import {Header} from "@/components/project/header/header";
 import {Footer} from "@/components/project/footer/footer";
+import {Providers} from "@/app/providers";
+import {Toaster} from 'sonner'
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -38,7 +40,10 @@ export default function RootLayout({
             storageKey="theme"       // localStorage key
         >
             <Header></Header>
-            {children}
+            <Providers>
+                {children}
+            </Providers>
+            <Toaster></Toaster>
             <Footer></Footer>
         </ThemeProvider>
         </body>

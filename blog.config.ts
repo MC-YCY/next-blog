@@ -1,6 +1,13 @@
 'use client';
 
-import {HomeTextSvgIcon,ArticleTextSvgIcon,PictureTextSvgIcon,DiaryTextSvgIcon,AboutTextSvgIcon} from '@/components/project/svg-icons/text'
+import {
+    HomeTextSvgIcon,
+    ArticleTextSvgIcon,
+    PictureTextSvgIcon,
+    DiaryTextSvgIcon,
+    AboutTextSvgIcon
+} from '@/components/project/svg-icons/text'
+
 export const blogConfig = {
     routes: [
         {

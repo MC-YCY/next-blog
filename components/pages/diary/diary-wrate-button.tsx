@@ -13,7 +13,11 @@ import {Diary} from "@/components/project/diary/diary";
 import dayjs from "dayjs";
 import {IconSunFilled} from "@tabler/icons-react";
 
-export const DiaryWriteButton = ({date}: { date: Date }) => {
+export const DiaryWriteButton = ({date, username, onSubmit}: {
+    date: Date,
+    username?: string,
+    onSubmit?: (arg0: string) => void
+}) => {
     const [value, setValue] = useState("");
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -25,9 +29,14 @@ export const DiaryWriteButton = ({date}: { date: Date }) => {
             textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
         }
     }, [value]);
+    const onClickSubmit = () => {
+        if (onSubmit) {
+            onSubmit(value);
+        }
+    }
     return <Drawer>
         <DrawerTrigger>
-            <SpanButton>写点什么...</SpanButton>
+            <SpanButton onClick={() => setValue('')}>写点什么...</SpanButton>
         </DrawerTrigger>
         <DrawerContent>
             <DrawerHeader>
@@ -37,7 +46,7 @@ export const DiaryWriteButton = ({date}: { date: Date }) => {
                         className1={'min-h-[300px]'}
                         className2={'min-h-[300px]'}
                         className3={'min-h-[300px]'}
-                        title={'春秋半夏'}
+                        title={username ?? '春秋半夏'}
                         date={dayjs(date).format('YYYY年MM月DD日')}
                         weather={<IconSunFilled width={24} height={24} color={'#ecca2f'}/>}
                         content={<textarea
@@ -52,7 +61,7 @@ export const DiaryWriteButton = ({date}: { date: Date }) => {
             </DrawerHeader>
             <DrawerFooter>
                 <DrawerClose>
-                    <SpanButton>确定</SpanButton>
+                    <SpanButton onClick={onClickSubmit}>确定</SpanButton>
                 </DrawerClose>
             </DrawerFooter>
         </DrawerContent>
